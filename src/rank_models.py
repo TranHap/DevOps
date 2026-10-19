@@ -26,7 +26,8 @@ def load(ds):
     pats = {"RF (sup.)": f"rq1/RF_MCV_{ds}_none_seed*.json",
             "LSTM (sup.)": f"rq1/LSTM_TFIDF_{ds}_none_seed*.json",
             "IsolationForest (unsup.)": f"ext/IF_MCV_{ds}_seed*.json",
-            "DeepLog (semi-sup.)": f"ext/DeepLog_{ds}_seed*.json"}
+            "DeepLog (semi-sup.)": f"ext/DeepLog_{ds}_seed*.json",
+            "DeepLog+EOS (semi-sup.)": f"ext/DeepLog_eos_{ds}_seed*.json"}
     rows = []
     for name, pat in pats.items():
         for f in glob.glob(os.path.join(glob.escape(ROOT), "results", pat)):

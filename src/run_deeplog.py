@@ -31,11 +31,12 @@ H, G, HIDDEN, LAYERS, EPOCHS, BATCH, LR = 10, 9, 64, 2, 5, 2048, 1e-3
 N_TRAIN_SESSIONS = 100_000
 
 
-def windows(seqs, vocab_map, unk):
-    """-> X (n, H) histories, y (n,) next events, owner (n,) session index. Ids: 0 = pad, unk = unseen."""
+def windows(seqs, vocab_map, unk, eos=None):
+    """-> X (n, H) histories, y (n,) next events, owner (n,) session index. Ids: 0 = pad, unk = unseen.
+    eos: if given, an end-of-session key is appended, so a session that stops early is checked too."""
     X, Y, owner = [], [], []
     for s, seq in enumerate(seqs):
-        ids = np.array([vocab_map.get(e, unk) for e in seq], dtype=np.int64)
+        ids = np.array([vocab_map.get(e, unk) for e in seq] + ([eos] if eos is not None else []), dtype=np.int64)
         padded = np.concatenate([np.zeros(H, np.int64), ids])
         for i in range(len(ids)):
             X.append(padded[i:i + H])
@@ -60,6 +61,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", default="HDFS", choices=["HDFS", "BGL"])
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--eos", action="store_true", help="append an end-of-session key (not in the original DeepLog)")
     args = ap.parse_args()
     torch.manual_seed(args.seed)
     rng = np.random.default_rng(args.seed)
@@ -73,9 +75,11 @@ def main():
     vocab = np.unique(np.concatenate(list(ev[normal_tr])))   # events seen in normal train sessions
     vocab_map = {e: i + 1 for i, e in enumerate(vocab)}      # 0 = padding
     unk = len(vocab) + 1
-    n_keys = unk + 1
+    eos = unk + 1 if args.eos else None
+    n_keys = unk + 2 if args.eos else unk + 1
+    tag = "_eos" if args.eos else ""
 
-    Xtr, ytr, _ = windows(ev[sample], vocab_map, unk)
+    Xtr, ytr, _ = windows(ev[sample], vocab_map, unk, eos)
     print(f"{args.dataset} seed {args.seed}: {len(vocab)} keys, {len(sample):,} normal sessions -> "
           f"{len(Xtr):,} training windows", flush=True)
 
@@ -97,7 +101,7 @@ def main():
     train_time = time.time() - t0
 
     # Score test positions; identical (history, next) pairs are scored once
-    Xte, yte, own = windows(ev[te], vocab_map, unk)
+    Xte, yte, own = windows(ev[te], vocab_map, unk, eos)
     pairs = np.concatenate([Xte, yte[:, None]], axis=1)
     uniq, inverse = np.unique(pairs, axis=0, return_inverse=True)
     model.eval()
@@ -113,14 +117,14 @@ def main():
     scores = np.zeros(len(te))
     np.maximum.at(scores, own, pos_rank)
 
-    res = {"model": "DeepLog", "representation": "event id sequence", "dataset": args.dataset,
-           "seed": args.seed, "h": H, "g": G, "train_sessions": int(len(sample)),
+    res = {"model": "DeepLog" + tag.upper().replace("_", "+"), "representation": "event id sequence",
+           "dataset": args.dataset, "seed": args.seed, "h": H, "g": G, "eos": args.eos, "train_sessions": int(len(sample)),
            "train_time_s": round(train_time, 1), "n_test_positions": int(len(pairs)),
            "n_unique_test_positions": int(len(uniq)),
            **evaluate(y[te], scores, threshold=G - 0.5)}
-    out = save_result(f"DeepLog_{args.dataset}_seed{args.seed}", res, subdir="ext")
+    out = save_result(f"DeepLog{tag}_{args.dataset}_seed{args.seed}", res, subdir="ext")
     os.makedirs(os.path.join(ROOT, "results", "ext", "scores"), exist_ok=True)
-    np.savez_compressed(os.path.join(ROOT, "results", "ext", "scores", f"DeepLog_{args.dataset}_seed{args.seed}.npz"),
+    np.savez_compressed(os.path.join(ROOT, "results", "ext", "scores", f"DeepLog{tag}_{args.dataset}_seed{args.seed}.npz"),
                         test_idx=te, y=y[te], scores=scores)
     print(f"DeepLog {args.dataset} seed {args.seed}: P={res['precision']} R={res['recall']} F1={res['f1']} "
           f"AUC={res['auc']} ({train_time:.0f}s train) -> {out}")

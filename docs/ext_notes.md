@@ -17,16 +17,42 @@ Threats: contamination 0.03 is close to the true HDFS anomaly rate (2.9%), which
 from DeepLog's paper where HDFS had 29 keys, here normal sessions use only **18 keys**, so top-9 = half
 the vocabulary (lenient).
 
-### DeepLog diagnosis (seed 0: P 0.977, R 0.407, F1 0.575, AUC 0.847)
-Not a bug, a property of the model (score distribution, `results/ext/scores/DeepLog_HDFS_seed0.npz`):
-- 1,163 anomalous test sessions contain an event never seen in normal training -> all detected.
-- ~2,200 anomalous sessions have a perfectly normal *order* (true next event always in the top-3).
-  Example: a block with `Unexpected error trying to delete block`, a template that also occurs in normal
-  sessions. DeepLog only asks "is the next event plausible?", so it **cannot see missing events**.
-- SHAP (E3) shows that the RF's strongest signal is exactly a missing event (fewer `PacketResponder`
-  lines than the 3 replicas). Counting (MCV) sees it, next-event prediction does not.
-- Lower g would raise recall (anomalies with max rank 4-8: ~800 vs normals: ~700) but g was not tuned:
-  tuning it would need labelled anomalies, against the semi-supervised setting.
+### DeepLog diagnosis: why F1 0.57 when the literature reports ~0.9+ on HDFS
+Our implementation already pads short sessions and checks **every** position (incl. the first event), and
+trains on normal sessions only. Vocabulary: 18 keys (templates seen in normal sessions), not 46.
+1. **No end-of-session (EOS) key** in the original DeepLog -> a session that *stops early* (missing events
+   at the end, e.g. the 3rd `PacketResponder ... terminating`) is never checked. Adding EOS (`--eos`),
+   seed 0, g=9: recall 0.407 -> 0.582, F1 0.575 -> 0.728, **AUC 0.847 -> 0.981**; +974 anomalies caught
+   for +38 false alarms. A missing event in the *middle* of a sequence is visible without EOS (the next
+   event becomes unlikely); the blind spot was the end.
+2. **Top-g** (post-hoc sensitivity, not used for selection; `results/ext/deeplog_g_sensitivity.csv`,
+   10 seeds, no EOS): g=3 F1 0.262 (P 0.17, R 0.61) | g=5 0.654 | g=9 0.573 | g=15 0.454. Even the best g
+   leaves recall <= 0.61 without EOS. With EOS (seed 0): g=5 F1 0.795, g=9 0.728.
+   g=9 comes from DeepLog's paper (~29 keys); with 18 keys it is lenient. We keep g=9 (fixed a priori):
+   choosing g needs labelled anomalies, against the semi-supervised setting.
+3. Remaining gap to ~0.9: training on 100k of ~391k normal sessions, CPU budget (5 epochs), and literature
+   setups that differ in split/labels. Report the gap and these reasons explicitly.
+
+=> Main ranking uses **DeepLog+EOS**; the original DeepLog is reported as an ablation.
+   Note: EOS was added after looking at seed-0 results (a diagnosis-driven fix, not a tuned value).
+
+## Sanity checks for the ranking (seed 0)
+**Duplicate sequences (Le & Zhang, ICSE'22).** HDFS has only 18,375 distinct event sequences for 575,061
+sessions. **97.8% of test sessions have an exact sequence that also occurs in train** (normal 98.4%,
+anomalous 79.4%); at the MCV level (what the RF sees) 100% / 98.9%. 10 sequences carry both labels (46
+sessions). Performance on test sessions whose sequence is NOT in train (3,789 sessions, 27.4% anomalous):
+| Model | seen sequences F1 / AUC | **novel sequences** F1 / AUC |
+|---|---|---|
+| RF (sup.) | 0.9996 / 1.000 | 0.989 / 0.9998 |
+| Isolation Forest | 0.687 / 0.965 | 0.657 / 0.830 |
+| DeepLog (no EOS) | 0.573 / 0.822 | 0.580 / 0.856 |
+RF on the 80 test sessions whose MCV vector is unseen: F1 0.931. -> Duplicates inflate the supervised scores a
+little (most "novel" sequences are re-orderings with known counts) but do not explain the 0.3+ F1 gap.
+Threat to validity: random session split + duplicates = near look-up for supervised models.
+
+**Isolation Forest threshold.** contamination=0.03 (loglizer default) ~ the true anomaly rate (2.9%): indirect
+label information. Label-free `contamination='auto'` flags ~9.7% of sessions: F1 0.41 (P 0.27, R 0.89),
+AUC unchanged (0.96). -> IF's F1 rank depends on that prior; the AUC ranking is threshold-free and robust.
 
 ## E2 - Scott-Knott ESD ranking
 `src/rank_models.py` + `src/scott_knott.R` (R package ScottKnottESD 2.0.3, `sk_esd(version="np")`:
@@ -41,16 +67,15 @@ Results: `results/ext/ranking_summary.csv`, plots `results/ext/ranking_f1.png`, 
 | 3 | Isolation Forest + MCV (unsupervised) | 0.654 +- 0.020 | 0.958 +- 0.004 | ~0.72 | ~0.60 |
 | 4 | DeepLog (semi-supervised) | 0.573 +- 0.015 | 0.839 +- 0.019 | ~0.97 | ~0.40 |
 
-- 4 distinct groups, **same order for F1 and AUC**: supervised >> unsupervised/semi-supervised.
-- The gap between the two supervised models is small (0.03 F1, 0.0004 AUC) but consistent; the gap to
-  the label-free models is huge (0.3-0.4 F1). On HDFS, labels are worth far more than model complexity:
-  the simplest supervised model (RF on counts) wins, the deep models do not.
-- IF vs DeepLog: IF has a much better AUC (0.958 vs 0.839) even without labels, because it works on counts
-  (MCV) and can see missing/extra events; DeepLog only checks the order of events.
-- DeepLog's F1 profile is precision ~0.97 / recall ~0.40 on every seed: it rarely raises false alarms but
-  misses all anomalies whose order looks normal. IF is the opposite trade-off (P ~0.72, R ~0.60).
-- Practical reading: if labelled incidents exist, use a supervised count-based model; without labels, a
-  count-based unsupervised model (IF) is the better start than next-event prediction on HDFS-like logs.
+(table above = original DeepLog without EOS; final ranking with DeepLog+EOS: see below)
+
+Wording for the report (claims kept to what the data supports):
+- "On HDFS, supervised models outperform label-free ones by a large margin (F1 gap 0.3+), although random
+  splitting with 97.8% duplicate sequences inflates the supervised scores."
+- RF vs LSTM: small but consistent gap; the simplest supervised model (RF on counts) ranks first.
+- IF vs DeepLog differ in learning paradigm, representation and model, so their order *suggests*, but does
+  not show, that count- vs order-based views matter. IF's F1 also depends on its contamination prior.
+- DeepLog without EOS: precision ~0.97 / recall ~0.40 on every seed, blind to sessions that stop early.
 
 ## E3 - Explaining the best model (RF + MCV) with SHAP
 `src/explain_rf.py`: RF retrained on seed 0 with the corr/VIF-selected 28 MCV features, TreeExplainer
@@ -73,4 +98,5 @@ lines (+0.9): the block never completed any replica write.
 
 Take-away: the RF learned HDFS's replication protocol (3 replicas -> 3 PacketResponder/Received/addStoredBlock
 events). Many anomalies are *missing* or *extra* events, which is why count-based features (MCV) work so
-well on HDFS and why an order-only model (DeepLog) misses them.
+well on HDFS. A missing event at the *end* of a block (e.g. the 3rd PacketResponder) is invisible to the
+original DeepLog, which has no end-of-session key; adding EOS recovers many of them (recall 0.41 -> 0.58).
