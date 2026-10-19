@@ -1,0 +1,15 @@
+{
+  "model": "LSTM",
+  "representation": "TF-IDF (Text)",
+  "dataset": "BGL",
+  "seed": 2,
+  "select": "none",
+  "n_features": 613,
+  "epochs": 30,
+  "train_time_s": 188.6,
+  "precision": 0.7941,
+  "recall": 0.9878,
+  "f1": 0.8804,
+  "auc": 0.9898,
+  "selection_report": null
+}

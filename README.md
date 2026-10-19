@@ -22,8 +22,8 @@ curl -L -o data/raw/BGL.zip     https://zenodo.org/api/records/8196385/files/BGL
 |---|---|---|
 | 1. Parsing (Drain + regex preprocessing) | `src/parse.py --dataset HDFS\|BGL` | `data/parsed/<DS>/` |
 | 2. Partition, split (seeds 0-9), MCV | `src/partition.py`, `src/split.py`, `src/mcv.py` | `data/sessions/`, `data/splits/`, `data/features/` |
-| 3. Other representations (Word2Vec, ...) | TODO | |
-| 4. Models + evaluation | TODO | |
+| 3. TF-IDF (Text) event vectors | `src/tfidf_text.py` | (in memory) |
+| 4. RF / LSTM, corr+VIF, summary | `src/run_rf.py`, `src/run_lstm.py`, `src/summarize_rq1.py` | `results/rq1*`, `docs/step3_models_notes.md` |
 
 ## Experimental setup (following the paper)
 | Dataset | Grouping | Split |

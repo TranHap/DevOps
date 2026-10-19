@@ -1,0 +1,15 @@
+{
+  "model": "LSTM",
+  "representation": "TF-IDF (Text)",
+  "dataset": "HDFS",
+  "seed": 7,
+  "select": "none",
+  "n_features": 114,
+  "epochs": 5,
+  "train_time_s": 56.6,
+  "precision": 0.96,
+  "recall": 0.9986,
+  "f1": 0.9789,
+  "auc": 0.9996,
+  "selection_report": null
+}
