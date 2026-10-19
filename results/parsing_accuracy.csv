@@ -1,0 +1,5 @@
+dataset,preprocessing,GA,#templates,#truth
+HDFS,False,0.998,17,14
+HDFS,True,1.0,14,14
+BGL,False,0.963,108,120
+BGL,True,0.97,106,120
