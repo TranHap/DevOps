@@ -60,11 +60,16 @@ Team names, LOG6309E, Fall 2025.
 - Isolation Forest on MCV (classical, unsupervised, labels never used).
 - DeepLog (deep learning, semi-supervised: normal sessions only, next-event prediction, top-g = 9).
 - DeepLog fix: original DeepLog has no end-of-session key -> sessions that stop early are never checked.
-  Adding EOS: recall 0.41 -> 0.58, AUC 0.85 -> 0.98 (seed 0).
+  Adding EOS (10 seeds): F1 0.573 -> 0.640, AUC 0.839 -> 0.961.
 
-### 9. Scott-Knott ESD ranking (4 models x 10 resamples)
-TBD after DeepLog+EOS seeds finish. Previous ranking (DeepLog without EOS):
-RF (0.998) > LSTM (0.968) > Isolation Forest (0.654) > DeepLog (0.573), same order for AUC.
+### 9. Scott-Knott ESD: supervised first, no clear winner without labels
+| Rank | F1 | AUC |
+|---|---|---|
+| 1 | RF 0.998 | RF 1.000 |
+| 2 | LSTM 0.968 | LSTM 0.9996 |
+| 3 | Isolation Forest 0.654 | DeepLog+EOS 0.961 |
+| 4 | DeepLog+EOS 0.640 | Isolation Forest 0.958 |
+- Label-free models swap ranks by metric; DeepLog+EOS is much less stable (F1 std 0.078 vs 0.020).
 [F] `results/ext/ranking_f1.png` and `ranking_auc.png`.
 
 ### 10. Can we trust the near-perfect HDFS scores?
@@ -82,7 +87,8 @@ RF (0.998) > LSTM (0.968) > Isolation Forest (0.654) > DeepLog (0.573), same ord
 ### 12. Take-home messages
 1. Simple beats complex here: RF on template counts ranks first, the paper's RQ1 finding holds.
 2. Correlation/VIF analysis: use it for tabular features, not for embeddings.
-3. Missing events are a key anomaly signal on HDFS: count-based models see them; sequence models need EOS.
+3. Missing events are a key anomaly signal on HDFS: count-based models see them; sequence models need EOS
+   (DeepLog AUC 0.84 -> 0.96 with an end-of-session key).
 4. Random splits + duplicate sequences make HDFS look easier than it is: report it, prefer AUC + resampling.
 
 ### Backup slides (only if asked)

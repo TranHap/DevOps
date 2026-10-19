@@ -67,7 +67,26 @@ Results: `results/ext/ranking_summary.csv`, plots `results/ext/ranking_f1.png`, 
 | 3 | Isolation Forest + MCV (unsupervised) | 0.654 +- 0.020 | 0.958 +- 0.004 | ~0.72 | ~0.60 |
 | 4 | DeepLog (semi-supervised) | 0.573 +- 0.015 | 0.839 +- 0.019 | ~0.97 | ~0.40 |
 
-(table above = original DeepLog without EOS; final ranking with DeepLog+EOS: see below)
+(table above = original DeepLog without EOS)
+
+### FINAL ranking (assignment's 4 models; DeepLog+EOS) -> `results/ext/ranking_summary.csv`, `ranking_{f1,auc}.png`
+| SK-ESD rank | by F1 (mean +- std) | by AUC (mean +- std) |
+|---|---|---|
+| 1 | RF 0.998 +- 0.000 | RF 1.000 +- 0.000 |
+| 2 | LSTM 0.968 +- 0.014 | LSTM 0.9996 +- 0.0001 |
+| 3 | Isolation Forest 0.654 +- 0.020 | DeepLog+EOS 0.961 +- 0.015 |
+| 4 | DeepLog+EOS 0.640 +- 0.078 | Isolation Forest 0.958 +- 0.004 |
+
+DeepLog+EOS per seed: F1 0.56-0.75 (P 0.91-0.99, R 0.39-0.60), AUC 0.936-0.981. Much less stable than IF.
+Ablation with the original DeepLog (`ranking_ablation_*`): it ranks last on both metrics (F1 0.573, AUC 0.839).
+
+Reading:
+- Supervised models rank 1-2 on both metrics; RF first.
+- The two label-free models swap ranks 3/4 depending on the metric and are close (F1 0.654 vs 0.640, AUC 0.958
+  vs 0.961). IF is far more stable across resamples (F1 std 0.020 vs 0.078). Also IF's F1 rests on the
+  contamination=0.03 prior (label-free 'auto' gives 0.41), so the F1 rank 3 is fragile; the AUC order is
+  threshold-free. Honest conclusion: **no clear winner between the two label-free models**.
+- EOS is the single most important design detail for DeepLog on HDFS (AUC 0.839 -> 0.961).
 
 Wording for the report (claims kept to what the data supports):
 - "On HDFS, supervised models outperform label-free ones by a large margin (F1 gap 0.3+), although random

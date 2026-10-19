@@ -1,0 +1,17 @@
+{
+  "model": "DeepLog+EOS",
+  "representation": "event id sequence",
+  "dataset": "HDFS",
+  "seed": 8,
+  "h": 10,
+  "g": 9,
+  "eos": true,
+  "train_sessions": 100000,
+  "train_time_s": 440.7,
+  "n_test_positions": 3523334,
+  "n_unique_test_positions": 28894,
+  "precision": 0.9735,
+  "recall": 0.6038,
+  "f1": 0.7454,
+  "auc": 0.9538
+}

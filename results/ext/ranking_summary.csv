@@ -1,9 +1,9 @@
 metric,model,sk_rank,mean,std,median,n
 auc,RF (sup.),1,1.0,0.0,1.0,10
 auc,LSTM (sup.),2,0.9996,0.0001,0.9996,10
-auc,IsolationForest (unsup.),3,0.9578,0.0036,0.9575,10
-auc,DeepLog (semi-sup.),4,0.8392,0.0192,0.831,10
+auc,DeepLog+EOS (semi-sup.),3,0.9613,0.0154,0.9643,10
+auc,IsolationForest (unsup.),4,0.9578,0.0036,0.9575,10
 f1,RF (sup.),1,0.998,0.0003,0.998,10
 f1,LSTM (sup.),2,0.9678,0.0143,0.9738,10
 f1,IsolationForest (unsup.),3,0.654,0.0199,0.657,10
-f1,DeepLog (semi-sup.),4,0.5731,0.015,0.5729,10
+f1,DeepLog+EOS (semi-sup.),4,0.6401,0.0783,0.6044,10

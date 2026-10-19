@@ -1,0 +1,6 @@
+"model","rank"
+"RF (sup.)",1
+"LSTM (sup.)",2
+"IsolationForest (unsup.)",3
+"DeepLog+EOS (semi-sup.)",4
+"DeepLog (semi-sup.)",5

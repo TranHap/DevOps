@@ -36,21 +36,30 @@ def load(ds):
     return pd.DataFrame(rows)
 
 
+MAIN = ["RF (sup.)", "LSTM (sup.)", "IsolationForest (unsup.)", "DeepLog+EOS (semi-sup.)"]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", default="HDFS")
     ds = ap.parse_args().dataset
     df = load(ds)
-    counts = df.groupby("model").size()
-    print("runs per model:", counts.to_dict())
+    print("runs per model:", df.groupby("model").size().to_dict())
+    # main ranking = the 4 models of the assignment; ablation adds the original DeepLog (no EOS)
+    for prefix, models in [("ranking", MAIN), ("ranking_ablation", sorted(df["model"].unique()))]:
+        print(f"\n== {prefix} ==")
+        rank(df[df["model"].isin(models)], ds, prefix)
+
+
+def rank(df, ds, prefix):
     out_dir = os.path.join(ROOT, "results", "ext")
 
     summary = []
     for metric in ["f1", "auc"]:
         wide = df.pivot(index="seed", columns="model", values=metric).dropna()
-        wide_path = os.path.join(out_dir, f"ranking_{metric}_input.csv")
+        wide_path = os.path.join(out_dir, f"{prefix}_{metric}_input.csv")
         wide.to_csv(wide_path, index=False)
-        rank_path = os.path.join(out_dir, f"ranking_{metric}.csv")
+        rank_path = os.path.join(out_dir, f"{prefix}_{metric}.csv")
         subprocess.run([RSCRIPT, os.path.join(ROOT, "src", "scott_knott.R"), wide_path, rank_path],
                        check=True, capture_output=True, text=True)
         ranks = pd.read_csv(rank_path).set_index("model")["rank"]
@@ -60,18 +69,18 @@ def main():
                             "median": round(wide[m].median(), 4), "n": len(wide)})
 
         order = ranks.sort_values().index
-        fig, ax = plt.subplots(figsize=(7, 3.6))
+        fig, ax = plt.subplots(figsize=(1.9 * len(order) + 1, 3.6))
         ax.boxplot([wide[m] for m in order], showmeans=True)
         ax.set_xticks(range(1, len(order) + 1), [f"{m}\nrank {ranks[m]}" for m in order], fontsize=8)
         ax.set_ylabel(metric.upper())
         ax.set_title(f"{ds}: {metric.upper()} over {len(wide)} resamples (Scott-Knott ESD ranks)")
         ax.grid(axis="y", alpha=0.3)
         fig.tight_layout()
-        fig.savefig(os.path.join(out_dir, f"ranking_{metric}.png"), dpi=200)
+        fig.savefig(os.path.join(out_dir, f"{prefix}_{metric}.png"), dpi=200)
         plt.close(fig)
 
     s = pd.DataFrame(summary).sort_values(["metric", "sk_rank", "mean"], ascending=[True, True, False])
-    s.to_csv(os.path.join(out_dir, "ranking_summary.csv"), index=False)
+    s.to_csv(os.path.join(out_dir, f"{prefix}_summary.csv"), index=False)
     print(s.to_string(index=False))
 
 
