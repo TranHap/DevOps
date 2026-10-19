@@ -30,3 +30,11 @@ curl -L -o data/raw/BGL.zip     https://zenodo.org/api/records/8196385/files/BGL
 |---|---|---|
 | HDFS | session = block_id (labels: `anomaly_label.csv`) | 70/30, shuffled |
 | BGL | fixed 6-hour window, anomalous if any alert line | 80/20, shuffled |
+
+## Extension (HDFS)
+| Part | Script | Output |
+|---|---|---|
+| E1 Isolation Forest / DeepLog | `src/run_iforest.py`, `src/run_deeplog.py` | `results/ext/*.json` |
+| E2 Scott-Knott ESD (needs R + ScottKnottESD) | `src/rank_models.py`, `src/scott_knott.R` | `results/ext/ranking_*` |
+| E3 SHAP on RF | `src/explain_rf.py` | `results/ext/shap/` |
+Notes for the report: `docs/step*_notes.md`, `docs/ext_notes.md`.

@@ -1,0 +1,16 @@
+{
+  "model": "DeepLog",
+  "representation": "event id sequence",
+  "dataset": "HDFS",
+  "seed": 9,
+  "h": 10,
+  "g": 9,
+  "train_sessions": 100000,
+  "train_time_s": 293.7,
+  "n_test_positions": 3351164,
+  "n_unique_test_positions": 28430,
+  "precision": 0.9626,
+  "recall": 0.4072,
+  "f1": 0.5723,
+  "auc": 0.8304
+}
