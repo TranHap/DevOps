@@ -60,6 +60,14 @@ def main():
                 row[f"{met}_cliffs_delta"] = f"{dlt:+.2f} ({magnitude(dlt)})"
         out.append(row)
     summ = pd.DataFrame(out)
+    # Holm-Bonferroni over all none-vs-vif tests run here (model x dataset x {F1, AUC})
+    pcols = [c for c in ["f1_wilcoxon_p", "auc_wilcoxon_p"] if c in summ]
+    flat = [(i, c, summ.at[i, c]) for c in pcols for i in summ.index if pd.notna(summ.at[i, c])]
+    order = sorted(flat, key=lambda x: x[2])
+    running = 0.0
+    for rank, (i, c, p) in enumerate(order):
+        running = max(running, min(1.0, (len(order) - rank) * p))  # step-down, kept monotone
+        summ.at[i, c.replace("_p", "_p_holm")] = round(running, 4)
     summ.to_csv(os.path.join(ROOT, "results", "rq1_summary.csv"), index=False)
     with pd.option_context("display.width", 250, "display.max_columns", 50):
         print(summ.T.to_string(header=False))

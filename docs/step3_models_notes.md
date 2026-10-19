@@ -30,13 +30,18 @@ Pitfall found: running it on a 100k-row subsample made rare templates look const
 | LSTM + TF-IDF | HDFS | 113 -> 22 | 0.968 +- 0.014 | 0.923 +- 0.042 | 1.000 | 0.999 | 0.955 |
 | LSTM + TF-IDF | BGL | 627 -> 108 | 0.851 +- 0.050 | 0.810 +- 0.035 | 0.976 | 0.949 | 0.871 |
 
-Paired comparison none vs vif (Wilcoxon signed-rank over the 10 seeds; Cliff's delta, positive = "none" better):
-| Model | Dataset | F1 p | F1 delta | AUC p | AUC delta |
+Paired comparison none vs vif: Wilcoxon signed-rank paired by seed (same split for both arms), Holm-corrected
+over the 7 tests; Cliff's delta (positive = "none" better).
+| Model | Dataset | F1 p (Holm) | F1 delta | AUC p (Holm) | AUC delta |
 |---|---|---|---|---|---|
-| RF | HDFS | 0.002 | +0.92 large | - (both 1.000) | - |
-| RF | BGL | 0.824 | +0.14 negligible | 0.375 | +0.39 medium |
-| LSTM | HDFS | 0.004 | +0.84 large | 0.002 | +1.00 large |
-| LSTM | BGL | 0.084 | +0.58 large | 0.014 | +0.76 large |
+| RF | HDFS | 0.002 (**0.014**) | +0.92 large | - (both 1.000) | - |
+| RF | BGL | 0.824 (0.824) | +0.14 negligible | 0.375 (0.750) | +0.39 medium |
+| LSTM | HDFS | 0.004 (**0.020**) | +0.84 large | 0.002 (**0.014**) | +1.00 large |
+| LSTM | BGL | 0.084 (0.252) | +0.58 large | 0.014 (0.055) | +0.76 large |
+
+Significant after Holm: RF-HDFS F1 (but tiny, ~0.001), LSTM-HDFS F1 and AUC. LSTM-BGL AUC (raw p = 0.014)
+is **not** significant after correction: say "consistent drop, not significant on BGL's small test set".
+Cliff's delta is computed between the two sets of 10 values (unpaired effect size, common in SE studies).
 
 ## Take-aways
 1. **Replication holds.** Within ~0.02 F1 of the paper everywhere, and the ordering is the same:
@@ -45,15 +50,35 @@ Paired comparison none vs vif (Wilcoxon signed-rank over the 10 seeds; Cliff's d
 2. **Correlation/VIF removes 40-85% of the features.**
    - RF: practically no loss. HDFS drop is statistically significant but only ~0.001 F1 (every seed loses
      a tiny bit). BGL difference is not significant. -> a 3x smaller, easier-to-explain model for free.
-   - LSTM: hurts. HDFS F1 -0.045 (p=0.004); BGL AUC -0.027 (p=0.014). Removing correlated tokens makes
-     different templates look alike (e.g. HDFS keeps 22 of 113 tokens), and the LSTM reads event sequences,
-     so it loses the ability to tell events apart. VIF assumes features are used as independent predictors,
-     which is not how a sequence model uses token dimensions.
+   - LSTM: hurts (HDFS F1 -0.045, significant after Holm; BGL same direction, not significant).
+     **Mechanism (measured, seed 0):** every event vector is the TF-IDF vector of one of the 45 (HDFS) / 370
+     (BGL) train templates, so the session x token matrix has rank <= #templates (HDFS: 110 tokens, rank 39;
+     BGL: 634 tokens, rank 251) -> massive perfect multicollinearity by construction. Tokens of the same
+     template are perfectly correlated, so the **correlation step** removes most of them (HDFS: -89 by
+     correlation, -0 by VIF; BGL: -491 by correlation, -37 by VIF with VIF up to 3e13). The selection
+     ignores whether a token helps tell templates apart: distinct event vectors drop from 44/45 to 29/45
+     (HDFS) and from 343/370 to 203/370 (BGL), and 17 / 152 templates become **all-zero, i.e. identical to
+     the padding vector**. The LSTM can no longer see those events.
+     -> Correlation/VIF analysis is designed for tabular predictors (MCV); it is ill-suited to template
+     embeddings, whose dimensions are not independent predictors.
 3. **LSTM: F1 moves much more than AUC.** At seed 0 HDFS+VIF F1 is 0.843 but AUC 0.999: ranking is fine,
    the 0.5 threshold is badly placed (precision drops, recall stays ~1.0). Max-over-windows scoring +
    class weighting push scores up. Reporting AUC next to F1 matters.
 4. **BGL is unstable:** 166 test windows, std of F1 0.03-0.05; seed 0 alone would have exaggerated the LSTM
    VIF drop (0.906 -> 0.766). Single-split results on BGL are unreliable; this motivates the 10 resamples.
+
+## Leakage / method checklist (verified in code)
+| Check | Answer |
+|---|---|
+| MCV vocabulary per seed, train only | yes: `mcv.build_mcv` uses `train_idx` of that seed; unseen events -> UNK |
+| TF-IDF IDF per seed, train only | yes: `tfidf_text.event_vectors` fits on the seed's train sessions |
+| Corr/VIF per seed, train only | yes: run inside `run_rf` / `run_lstm` on that seed's x_train; the kept set differs across seeds (9-10 distinct sets out of 10) |
+| LSTM epochs / early stopping | fixed in advance (HDFS 5, BGL 30), no early stopping, nothing tuned on test (no hyper-parameter tuning at all) |
+| VIF matrix for LSTM | train sessions x tokens, mean of event vectors (HDFS 402,542 x 110, BGL 660 x 634); singular -> VIF via pseudo-inverse of the correlation matrix |
+| Window -> session | session score = max window probability; predicted anomalous if score > 0.5 (= at least one window > 0.5); AUC on the continuous score |
+| Short sessions | left-padded to the window size with a zero vector; the last window is always added so the tail is covered |
+| Paired test | yes, Wilcoxon signed-rank paired by seed + Holm + Cliff's delta |
+| What a seed changes | both the split and the model initialisation (RF `random_state`, `torch.manual_seed`) |
 
 ## Threats
 - LSTM epochs / lr / class weighting not reported by the paper; chosen by us, not tuned.
