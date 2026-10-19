@@ -16,8 +16,8 @@ def evaluate(y_true, scores, threshold=0.5):
             "auc": round(float(roc_auc_score(y_true, scores)), 4)}
 
 
-def save_result(name, result):
-    out = os.path.join(ROOT, "results", "rq1", f"{name}.json")
+def save_result(name, result, subdir="rq1"):
+    out = os.path.join(ROOT, "results", subdir, f"{name}.json")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)

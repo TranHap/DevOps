@@ -1,0 +1,16 @@
+{
+  "seed": 0,
+  "select": "vif",
+  "n_features": 28,
+  "explained_sessions": {
+    "anomalous": 1000,
+    "normal": 1000
+  },
+  "performance": {
+    "precision": 0.9958,
+    "recall": 0.9958,
+    "f1": 0.9958,
+    "auc": 1.0
+  },
+  "base_value": 0.029276994698689836
+}

@@ -1,0 +1,2 @@
+DeepLog (semi-sup.),IsolationForest (unsup.),LSTM (sup.),RF (sup.)
+0.5746,0.6798,0.9409,0.9974

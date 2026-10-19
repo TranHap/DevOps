@@ -1,0 +1,12 @@
+{
+  "model": "IsolationForest",
+  "representation": "MCV",
+  "dataset": "HDFS",
+  "seed": 0,
+  "contamination": 0.03,
+  "train_time_s": 1.4,
+  "precision": 0.7572,
+  "recall": 0.6167,
+  "f1": 0.6798,
+  "auc": 0.9628
+}
