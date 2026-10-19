@@ -21,8 +21,8 @@ curl -L -o data/raw/BGL.zip     https://zenodo.org/api/records/8196385/files/BGL
 | Step | Script | Output |
 |---|---|---|
 | 1. Parsing (Drain + regex preprocessing) | `src/parse.py --dataset HDFS\|BGL` | `data/parsed/<DS>/` |
-| 2. Partition + train/test split | TODO | |
-| 3. Representation (MCV, Word2Vec, ...) | TODO | |
+| 2. Partition, split (seeds 0-9), MCV | `src/partition.py`, `src/split.py`, `src/mcv.py` | `data/sessions/`, `data/splits/`, `data/features/` |
+| 3. Other representations (Word2Vec, ...) | TODO | |
 | 4. Models + evaluation | TODO | |
 
 ## Experimental setup (following the paper)
