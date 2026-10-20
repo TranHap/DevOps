@@ -1,0 +1,56 @@
+# BGL (loghub). Paths are relative to part1/.
+name: bgl
+kind: bgl
+raw_log: data/raw/BGL/BGL.log
+sample_2k: ../external/loghub-2.0/2k_dataset/BGL/BGL_2k.log_structured_corrected.csv
+log_format: '<Label> <Timestamp> <Date> <Node> <Time> <NodeRepeat> <Type> <Component> <Level> <Content>'
+drain: {depth: 4, st: 0.5, max_child: 100}
+preprocessing: qin            # D6. One of: qin | loghub | paper | paper_refined | none
+regex:
+  loghub: ['core\.\d+']
+  paper:                      # replication package README, "configuration used in our experiment"
+    - 'core\.\d+'
+    - '(?<=r)\d{1,2}'
+    - '(?<=fpr)\d{1,2}'
+    - '(0x)?[0-9a-fA-F]{8}'
+    - '(?<=\.\.)0[xX][0-9a-fA-F]+'
+    - '(?<=\.\.)\d+(?!x)'
+    - '\d+(?=:)'
+    - '^\d+$'
+    - '(?<=\=)\d+(?!x)'
+    - '(?<=\=)0[xX][0-9a-fA-F]+'
+    - '(?<=\ )[A-Z][\+|\-](?= |$)'
+    - '(?<=:\ )[A-Z](?= |$)'
+    - '(?<=\ [A-Z]\ )[A-Z](?= |$)'
+  paper_refined:              # replication package README, "refined" list
+    - 'core\.\d+'
+    - '(?<=:)(\ [A-Z][+-]?)+(?![a-z])'
+    - '(?<=r)\d{1,2}'
+    - '(?<=fpr)\d{1,2}'
+    - '(0x)?[0-9a-fA-F]{8}'
+    - '(?<=\.\.)0[xX][0-9a-fA-F]+'
+    - '(?<=\.\.)\d+(?!x)'
+    - '\d+(?=:)'
+    - '^\d+$'
+    - '(?<=\=)\d+(?!x)'
+    - '(?<=\=)0[xX][0-9a-fA-F]+'
+partition: {type: time_window, window_hours: 6}
+split: {train_ratio: 0.8}
+window: {size: 50, stride: 50}
+rf:
+  n_estimators: 10
+  max_features: sqrt
+  max_depth: null
+  min_samples_split: 2
+  bootstrap: true
+feature_selection: {corr_cut: 0.3, vif_threshold: 5.0}
+bert: {checkpoint: bert-base-uncased, layer: -2, max_seq_len: 50, keep_placeholders: true, batch_size: 64}
+lstm:
+  hidden: 8
+  layers: 1
+  dropout: 0.0
+  lr: 0.001
+  epochs: 30
+  batch_size: 512
+  balanced_sampler: true
+  val_ratio: 0.1

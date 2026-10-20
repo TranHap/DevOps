@@ -1,0 +1,65 @@
+2026-10-19 01:40:43,868 [INFO] part1: === bgl_2k | seed 42 | stage all | model all | split random
+2026-10-19 01:40:44,530 [INFO] part1: Parsing /mnt/data/Fall26/DevOps/GroupAssignment/part1/../external/loghub-2.0/2k_dataset/BGL/BGL_2k.log (kind=bgl, preprocessing=qin)
+2026-10-19 01:40:44,606 [INFO] part1: Masking config: {'mode': 'qin', 'sequence_after_estimation': ['IPv4_port', 'package_host', 'IPv6', 'time', 'path', 'size', 'numerical', 'weekday_months']}
+2026-10-19 01:40:44,688 [INFO] part1: Parsed 2000/2000 lines -> 106 templates in 0s
+2026-10-19 01:40:44,694 [INFO] part1: Wrote /mnt/data/Fall26/DevOps/GroupAssignment/part1/data/smoke/parsed/bgl_2k/structured.parquet
+2026-10-19 01:40:44,697 [INFO] part1: Sessions: 295 (41 anomalous, 13.90%), mean length 6.8
+2026-10-19 01:40:44,698 [INFO] part1: Split random seed=42: train 236 (12.71% anomalous) / test 59 (18.64% anomalous) -> bgl_2k_seed42.json
+2026-10-19 01:40:46,156 [INFO] part1: Device: cuda (NVIDIA GeForce RTX 4060 Laptop GPU)
+2026-10-19 01:40:47,197 [INFO] part1: BERT embeddings (107, 768) saved (9 templates truncated at 50 tokens)
+2026-10-19 01:40:47,213 [INFO] part1: BERT rank: {'n_templates': 106, 'embedding_dim': 768, 'rank': 106, 'rank_centered': 105}
+2026-10-19 01:40:47,215 [INFO] part1: MCV: 106 templates, 101 in train vocabulary; test events unseen in train: 14 of 246 (6 sessions)
+2026-10-19 01:40:47,290 [INFO] part1: [rf] training on 236 sessions (seed 42, split random)
+2026-10-19 01:40:47,346 [INFO] part1: [rf] done in 0.0s, 101 features
+2026-10-19 01:40:47,346 [INFO] part1: [rf_fs] training on 236 sessions (seed 42, split random)
+2026-10-19 01:40:47,347 [INFO] part1: Step 3a: 101 features, 0 constant
+2026-10-19 01:40:47,766 [INFO] part1: Step 3a: 64 correlation clusters -> 64 features after correlation analysis
+2026-10-19 01:40:48,505 [INFO] part1: Step 3a: 3 VIF removals -> 61 features kept (max VIF 4.54)
+2026-10-19 01:40:48,561 [INFO] part1: [rf_fs] done in 1.2s, 61 features
+2026-10-19 01:40:48,562 [INFO] part1: [lstm] training on 236 sessions (seed 42, split random)
+2026-10-19 01:40:48,563 [INFO] part1: Device: cuda (NVIDIA GeForce RTX 4060 Laptop GPU)
+2026-10-19 01:40:48,566 [INFO] part1: LSTM: 212 fit sessions (28 anomalous) -> 220 windows; 24 val sessions (2 anomalous) -> 25 windows
+2026-10-19 01:40:48,733 [INFO] part1:   epoch  1 loss 0.6440 | val P 0.154 R 1.000 F1 0.267 | 0.2s
+2026-10-19 01:40:48,740 [INFO] part1:   epoch  2 loss 0.6484 | val P 0.167 R 1.000 F1 0.286 | 0.0s
+2026-10-19 01:40:48,747 [INFO] part1:   epoch  3 loss 0.6404 | val P 0.167 R 1.000 F1 0.286 | 0.0s
+2026-10-19 01:40:48,747 [INFO] part1: LSTM: best epoch 2 (val F1 0.286)
+2026-10-19 01:40:48,753 [INFO] part1: [lstm] done in 0.2s, 768 features
+2026-10-19 01:40:48,779 [INFO] part1: [rf] P 1.000 R 0.636 F1 0.778 AUC 0.909 (tp 7 fp 0 tn 48 fn 4)
+2026-10-19 01:40:48,788 [INFO] part1: [rf_fs] P 1.000 R 0.636 F1 0.778 AUC 0.861 (tp 7 fp 0 tn 48 fn 4)
+2026-10-19 01:40:48,796 [INFO] part1: [lstm] P 0.400 R 0.909 F1 0.556 AUC 0.858 (tp 10 fp 15 tn 33 fn 1)
+2026-10-19 01:40:48,799 [INFO] part1: [lstm] window-level (package-style) P 0.400 R 0.909 F1 0.556
+2026-10-19 01:41:02,770 [INFO] part1: === bgl_2k | seed 42 | stage eval | model all | split random
+2026-10-19 01:41:03,443 [INFO] part1: [rf] P 1.000 R 0.636 F1 0.778 AUC 0.909 (tp 7 fp 0 tn 48 fn 4)
+2026-10-19 01:41:03,452 [INFO] part1: [rf_fs] P 1.000 R 0.636 F1 0.778 AUC 0.861 (tp 7 fp 0 tn 48 fn 4)
+2026-10-19 01:41:03,460 [INFO] part1: [lstm] P 0.400 R 0.909 F1 0.556 AUC 0.858 (tp 10 fp 15 tn 33 fn 1)
+2026-10-19 01:41:03,463 [INFO] part1: [lstm] window-level (package-style) P 0.400 R 0.909 F1 0.556
+2026-10-19 02:55:55,517 [INFO] part1: === bgl_2k | seed 42 | stage all | model all | split random
+2026-10-19 02:55:56,180 [INFO] part1: Parsing /mnt/data/Fall26/DevOps/GroupAssignment/part1/../external/loghub-2.0/2k_dataset/BGL/BGL_2k.log (kind=bgl, preprocessing=qin)
+2026-10-19 02:55:56,241 [INFO] part1: Masking config: {'mode': 'qin', 'sequence_after_estimation': ['IPv4_port', 'package_host', 'IPv6', 'time', 'path', 'size', 'numerical', 'weekday_months']}
+2026-10-19 02:55:56,326 [INFO] part1: Parsed 2000/2000 lines -> 106 templates in 0s
+2026-10-19 02:55:56,332 [INFO] part1: Wrote /mnt/data/Fall26/DevOps/GroupAssignment/part1/data/smoke/parsed/bgl_2k/structured.parquet
+2026-10-19 02:55:56,336 [INFO] part1: Sessions: 295 (41 anomalous, 13.90%), mean length 6.8
+2026-10-19 02:55:56,337 [INFO] part1: Split random seed=42: train 236 (12.71% anomalous) / test 59 (18.64% anomalous) -> bgl_2k_seed42.json
+2026-10-19 02:55:57,729 [INFO] part1: Device: cuda (NVIDIA GeForce RTX 4060 Laptop GPU)
+2026-10-19 02:55:58,853 [INFO] part1: BERT embeddings (107, 768) saved (9 templates truncated at 50 tokens)
+2026-10-19 02:55:58,869 [INFO] part1: BERT rank: {'n_templates': 106, 'embedding_dim': 768, 'rank': 106, 'rank_centered': 105}
+2026-10-19 02:55:58,873 [INFO] part1: MCV: 106 templates, 101 in train vocabulary; test events unseen in train: 14 of 246 (6 sessions)
+2026-10-19 02:55:58,946 [INFO] part1: [rf] training on 236 sessions (seed 42, split random)
+2026-10-19 02:55:59,004 [INFO] part1: [rf] done in 0.0s, 101 features
+2026-10-19 02:55:59,004 [INFO] part1: [rf_fs] training on 236 sessions (seed 42, split random)
+2026-10-19 02:55:59,005 [INFO] part1: Step 3a: 101 features, 0 constant
+2026-10-19 02:55:59,420 [INFO] part1: Step 3a: 64 correlation clusters -> 64 features after correlation analysis
+2026-10-19 02:56:00,166 [INFO] part1: Step 3a: 3 VIF removals -> 61 features kept (max VIF 4.54)
+2026-10-19 02:56:00,222 [INFO] part1: [rf_fs] done in 1.2s, 61 features
+2026-10-19 02:56:00,223 [INFO] part1: [lstm] training on 236 sessions (seed 42, split random)
+2026-10-19 02:56:00,223 [INFO] part1: Device: cuda (NVIDIA GeForce RTX 4060 Laptop GPU)
+2026-10-19 02:56:00,224 [INFO] part1: LSTM: 212 fit sessions (28 anomalous) -> 220 windows; 24 val sessions (2 anomalous) -> 25 windows
+2026-10-19 02:56:00,341 [INFO] part1:   epoch  1 loss 0.6440 | val P 0.154 R 1.000 F1 0.267 | 0.1s
+2026-10-19 02:56:00,348 [INFO] part1:   epoch  2 loss 0.6484 | val P 0.167 R 1.000 F1 0.286 | 0.0s
+2026-10-19 02:56:00,355 [INFO] part1:   epoch  3 loss 0.6404 | val P 0.167 R 1.000 F1 0.286 | 0.0s
+2026-10-19 02:56:00,355 [INFO] part1: LSTM: best epoch 2 (val F1 0.286)
+2026-10-19 02:56:00,359 [INFO] part1: [lstm] done in 0.1s, 768 features
+2026-10-19 02:56:00,369 [INFO] part1: [rf] P 1.000 R 0.636 F1 0.778 AUC 0.909 (tp 7 fp 0 tn 48 fn 4)
+2026-10-19 02:56:00,378 [INFO] part1: [rf_fs] P 1.000 R 0.636 F1 0.778 AUC 0.861 (tp 7 fp 0 tn 48 fn 4)
+2026-10-19 02:56:00,386 [INFO] part1: [lstm] P 0.400 R 0.909 F1 0.556 AUC 0.858 (tp 10 fp 15 tn 33 fn 1)
+2026-10-19 02:56:00,389 [INFO] part1: [lstm] window-level (package-style) P 0.400 R 0.909 F1 0.556

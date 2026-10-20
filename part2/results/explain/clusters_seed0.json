@@ -1,0 +1,228 @@
+[
+  {
+    "rep": 1,
+    "members": [
+      1,
+      5
+    ],
+    "name": "G1"
+  },
+  {
+    "rep": 2,
+    "members": [
+      2,
+      11
+    ],
+    "name": "G2"
+  },
+  {
+    "rep": 3,
+    "members": [
+      3,
+      4,
+      16
+    ],
+    "name": "G3"
+  },
+  {
+    "rep": 6,
+    "members": [
+      6,
+      7,
+      9,
+      12
+    ],
+    "name": "G6"
+  },
+  {
+    "rep": 8,
+    "members": [
+      8
+    ],
+    "name": "G8"
+  },
+  {
+    "rep": 10,
+    "members": [
+      10,
+      35
+    ],
+    "name": "G10"
+  },
+  {
+    "rep": 13,
+    "members": [
+      13
+    ],
+    "name": "G13"
+  },
+  {
+    "rep": 14,
+    "members": [
+      14,
+      19,
+      20,
+      24
+    ],
+    "name": "G14"
+  },
+  {
+    "rep": 15,
+    "members": [
+      15
+    ],
+    "name": "G15"
+  },
+  {
+    "rep": 17,
+    "members": [
+      17,
+      32
+    ],
+    "name": "G17"
+  },
+  {
+    "rep": 18,
+    "members": [
+      18
+    ],
+    "name": "G18"
+  },
+  {
+    "rep": 21,
+    "members": [
+      21
+    ],
+    "name": "G21"
+  },
+  {
+    "rep": 22,
+    "members": [
+      22
+    ],
+    "name": "G22"
+  },
+  {
+    "rep": 23,
+    "members": [
+      23
+    ],
+    "name": "G23"
+  },
+  {
+    "rep": 25,
+    "members": [
+      25,
+      26
+    ],
+    "name": "G25"
+  },
+  {
+    "rep": 27,
+    "members": [
+      27,
+      28
+    ],
+    "name": "G27"
+  },
+  {
+    "rep": 29,
+    "members": [
+      29
+    ],
+    "name": "G29"
+  },
+  {
+    "rep": 30,
+    "members": [
+      30,
+      31
+    ],
+    "name": "G30"
+  },
+  {
+    "rep": 33,
+    "members": [
+      33
+    ],
+    "name": "G33"
+  },
+  {
+    "rep": 34,
+    "members": [
+      34
+    ],
+    "name": "G34"
+  },
+  {
+    "rep": 36,
+    "members": [
+      36
+    ],
+    "name": "G36"
+  },
+  {
+    "rep": 37,
+    "members": [
+      37
+    ],
+    "name": "G37"
+  },
+  {
+    "rep": 38,
+    "members": [
+      38
+    ],
+    "name": "G38"
+  },
+  {
+    "rep": 39,
+    "members": [
+      39
+    ],
+    "name": "G39"
+  },
+  {
+    "rep": 40,
+    "members": [
+      40
+    ],
+    "name": "G40"
+  },
+  {
+    "rep": 41,
+    "members": [
+      41
+    ],
+    "name": "G41"
+  },
+  {
+    "rep": 42,
+    "members": [
+      42,
+      43
+    ],
+    "name": "G42"
+  },
+  {
+    "rep": 44,
+    "members": [
+      44
+    ],
+    "name": "G44"
+  },
+  {
+    "rep": 45,
+    "members": [
+      45
+    ],
+    "name": "G45"
+  },
+  {
+    "rep": 46,
+    "members": [
+      46
+    ],
+    "name": "G46"
+  }
+]

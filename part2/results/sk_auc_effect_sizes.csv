@@ -1,0 +1,7 @@
+"i","j","ranki","rankj","cohen_d_magnitude","cohen_d_abs","cliff_delta","cliff_magnitude"
+"RF_MCV","LSTM_BERT",1,2,"large",0.972,0.54,"large"
+"RF_MCV","PCA",1,4,"large",12.706,1,"large"
+"RF_MCV","LogGPT",1,3,"large",1.048,1,"large"
+"LSTM_BERT","PCA",2,4,"large",12.668,1,"large"
+"LSTM_BERT","LogGPT",2,3,"large",1.02,1,"large"
+"PCA","LogGPT",4,3,"large",7.166,-1,"large"

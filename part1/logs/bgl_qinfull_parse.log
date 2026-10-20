@@ -1,0 +1,12 @@
+2026-10-19 02:14:13,071 [INFO] parse: Parsing /mnt/data/Fall26/DevOps/GroupAssignment/part1/data/raw/BGL/BGL.log (kind=bgl, preprocessing=qin_full)
+2026-10-19 02:14:13,136 [INFO] parse: Masking config: {'mode': 'qin_full', 'sequence_after_estimation': ['url', 'IPv4_port', 'host_port', 'package_host', 'IPv6', 'Mac_address', 'time', 'path', 'block', 'date', 'duration', 'size', 'numerical', 'weekday_months']}
+2026-10-19 02:14:16,972 [INFO] parse:   642000 lines read, 925 clusters, 4s
+2026-10-19 02:14:20,720 [INFO] parse:   1282000 lines read, 17478 clusters, 8s
+2026-10-19 02:14:24,147 [INFO] parse:   1922000 lines read, 17911 clusters, 11s
+2026-10-19 02:14:27,595 [INFO] parse:   2562000 lines read, 19437 clusters, 15s
+2026-10-19 02:14:32,887 [INFO] parse:   3202000 lines read, 22947 clusters, 20s
+2026-10-19 02:14:38,739 [INFO] parse:   3842000 lines read, 28346 clusters, 26s
+2026-10-19 02:14:45,311 [INFO] parse:   4482000 lines read, 56166 clusters, 32s
+2026-10-19 02:14:51,202 [INFO] parse:   4747963 lines read, 57710 clusters, 38s
+2026-10-19 02:14:51,657 [INFO] parse: Parsed 4747963/4747963 lines -> 421 templates in 39s
+2026-10-19 02:14:52,546 [INFO] parse: Wrote /mnt/data/Fall26/DevOps/GroupAssignment/part1/data/parsed/bgl_qinfull/structured.parquet

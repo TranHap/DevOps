@@ -1,0 +1,34 @@
+# HDFS_v1 (loghub). Paths are relative to part1/.
+name: hdfs
+kind: hdfs
+raw_log: data/raw/HDFS_v1/HDFS.log
+label_file: data/raw/HDFS_v1/preprocessed/anomaly_label.csv
+sample_2k: ../external/loghub-2.0/2k_dataset/HDFS/HDFS_2k.log_structured_corrected.csv
+log_format: '<Date> <Time> <Pid> <Level> <Component>: <Content>'
+drain: {depth: 4, st: 0.5, max_child: 100}
+preprocessing: qin            # D6. One of: qin | loghub | paper | none
+regex:
+  # logpai/logparser + Loghub-2.0 Drain benchmark settings
+  loghub: ['blk_-?\d+', '(\d+\.){3}\d+(:\d+)?']
+  # The replication package lists no extra regex for HDFS, i.e. the benchmark defaults
+  paper: ['blk_-?\d+', '(\d+\.){3}\d+(:\d+)?']
+partition: {type: session}
+split: {train_ratio: 0.7}
+window: {size: 30, stride: 1}
+rf:                           # replication package models/traditional.py
+  n_estimators: 10
+  max_features: sqrt          # 'auto' in sklearn 0.24 == 'sqrt' for classifiers
+  max_depth: null
+  min_samples_split: 2
+  bootstrap: true
+feature_selection: {corr_cut: 0.3, vif_threshold: 5.0}
+bert: {checkpoint: bert-base-uncased, layer: -2, max_seq_len: 50, keep_placeholders: true, batch_size: 64}
+lstm:                         # replication package models/LSTM.py
+  hidden: 8
+  layers: 1
+  dropout: 0.0
+  lr: 0.001
+  epochs: 30
+  batch_size: 512             # windows per mini-batch (package: per-session steps, see DECISIONS)
+  balanced_sampler: true
+  val_ratio: 0.1

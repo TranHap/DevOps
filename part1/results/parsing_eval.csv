@@ -1,0 +1,10 @@
+dataset,config,n_lines,n_templates_ground_truth,n_templates_parsed,GA,PA,PA_relaxed,masking
+hdfs,none,2000,14,17,0.9975,0.5005,0.9565,"{'mode': 'none', 'regexes': []}"
+hdfs,loghub,2000,14,16,0.9975,0.3545,0.9975,"{'mode': 'regex', 'regexes': ['blk_-?\\d+', '(\\d+\\.){3}\\d+(:\\d+)?']}"
+hdfs,paper,2000,14,16,0.9975,0.3545,0.9975,"{'mode': 'regex', 'regexes': ['blk_-?\\d+', '(\\d+\\.){3}\\d+(:\\d+)?']}"
+hdfs,qin,2000,14,14,1.0,0.443,0.6735,"{'mode': 'qin', 'sequence_after_estimation': ['IPv4_port', 'path', 'block', 'numerical']}"
+bgl,none,2000,120,108,0.9625,0.342,0.3435,"{'mode': 'none', 'regexes': []}"
+bgl,loghub,2000,120,108,0.9625,0.342,0.3435,"{'mode': 'regex', 'regexes': ['core\\.\\d+']}"
+bgl,paper,2000,120,106,0.9695,0.394,0.3955,"{'mode': 'regex', 'regexes': ['core\\.\\d+', '(?<=r)\\d{1,2}', '(?<=fpr)\\d{1,2}', '(0x)?[0-9a-fA-F]{8}', '(?<=\\.\\.)0[xX][0-9a-fA-F]+', '(?<=\\.\\.)\\d+(?!x)', '\\d+(?=:)', '^\\d+$', '(?<=\\=)\\d+(?!x)', '(?<=\\=)0[xX][0-9a-fA-F]+', '(?<=\\ )[A-Z][\\+|\\-](?= |$)', '(?<=:\\ )[A-Z](?= |$)', '(?<=\\ [A-Z]\\ )[A-Z](?= |$)']}"
+bgl,paper_refined,2000,120,106,0.9695,0.3765,0.378,"{'mode': 'regex', 'regexes': ['core\\.\\d+', '(?<=:)(\\ [A-Z][+-]?)+(?![a-z])', '(?<=r)\\d{1,2}', '(?<=fpr)\\d{1,2}', '(0x)?[0-9a-fA-F]{8}', '(?<=\\.\\.)0[xX][0-9a-fA-F]+', '(?<=\\.\\.)\\d+(?!x)', '\\d+(?=:)', '^\\d+$', '(?<=\\=)\\d+(?!x)', '(?<=\\=)0[xX][0-9a-fA-F]+']}"
+bgl,qin,2000,120,106,0.9695,0.918,0.925,"{'mode': 'qin', 'sequence_after_estimation': ['IPv4_port', 'package_host', 'IPv6', 'time', 'path', 'size', 'numerical', 'weekday_months']}"

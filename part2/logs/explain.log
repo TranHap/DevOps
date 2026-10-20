@@ -1,0 +1,56 @@
+2026-10-19 15:22:07,015 [INFO] part2.explain: SHAP shap_rf_seed0: (10007, 46) in 3.5s
+2026-10-19 15:22:10,906 [INFO] part2.explain: global: 10007 sessions (5007 anomalous); top-5 [33, 4, 1, 5, 3]
+2026-10-19 15:22:13,130 [INFO] part2.explain: clusters reproduce Part 1's step-3a correlation removals for seed 0 (16 removed)
+2026-10-19 15:22:13,504 [INFO] part2.explain: grouped: 30 clusters (11 with >1 member); top-5 ['G33', 'G1', 'G3', 'G6', 'G21']
+2026-10-19 15:22:14,596 [INFO] part2.explain: Step 3a: 46 features, 0 constant
+2026-10-19 15:22:15,344 [INFO] part2.explain: Step 3a: 30 correlation clusters -> 30 features after correlation analysis
+2026-10-19 15:24:32,168 [INFO] part2.explain: Step 3a: 3 VIF removals -> 27 features kept (max VIF 4.06)
+2026-10-19 15:24:35,465 [INFO] part2.explain: SHAP shap_rf_fs_seed0: (10007, 27) in 2.9s
+2026-10-19 15:24:50,817 [INFO] part2.explain: permutation importance done in 15.3s (F1 on the sample = 0.9990)
+2026-10-19 15:24:50,839 [INFO] part2.explain: cross-check:
+                                                 comparison  n_items  kendall_tau  top5_overlap
+0                  grouped SHAP (RF) vs SHAP (RF + step 3a)       27     0.740567             4
+1  grouped SHAP (RF) vs grouped permutation importance (F1)       30     0.750530             5
+2          SHAP vs permutation importance (F1), per feature       46     0.485126             2
+2026-10-19 15:24:50,922 [INFO] part2.explain: SHAP shap_rf_local_seed0: (16, 46) in 0.0s
+2026-10-19 15:25:01,908 [INFO] part2.explain: local: 16 cases (9 FN, 5 FP) -> local_cases.md
+2026-10-19 15:25:08,376 [INFO] part2.explain: SHAP shap_rf_stab_seed1: (9998, 46) in 6.2s
+2026-10-19 15:25:15,151 [INFO] part2.explain: SHAP shap_rf_stab_seed2: (10025, 46) in 5.6s
+2026-10-19 15:25:22,219 [INFO] part2.explain: SHAP shap_rf_stab_seed3: (10078, 46) in 5.9s
+2026-10-19 15:25:29,418 [INFO] part2.explain: SHAP shap_rf_stab_seed4: (10119, 45) in 6.0s
+2026-10-19 15:25:35,906 [INFO] part2.explain: SHAP shap_rf_stab_seed5: (10119, 46) in 5.3s
+2026-10-19 15:25:41,699 [INFO] part2.explain: SHAP shap_rf_stab_seed6: (10084, 47) in 4.6s
+2026-10-19 15:25:48,560 [INFO] part2.explain: SHAP shap_rf_stab_seed7: (10108, 46) in 5.6s
+2026-10-19 15:25:55,505 [INFO] part2.explain: SHAP shap_rf_stab_seed8: (10082, 46) in 5.8s
+2026-10-19 15:26:01,647 [INFO] part2.explain: SHAP shap_rf_stab_seed9: (10090, 46) in 5.0s
+2026-10-19 15:26:04,931 [INFO] part2.explain: stability over 10 seeds:
+   group  mean_importance  median_rank  n_top5
+16   G33         0.137582          1.0      10
+0     G1         0.112195          3.0      10
+14    G3         0.107369          2.0      10
+29    G6         0.052100          4.0      10
+5    G17         0.035035          5.5       5
+8    G21         0.029005          5.5       5
+17   G34         0.019444          7.0       0
+6    G18         0.014189          8.0       0
+2026-10-19 15:26:47,949 [INFO] part2.explain: global: 10007 sessions (5007 anomalous); top-5 [33, 4, 1, 5, 3]
+2026-10-19 15:26:47,972 [INFO] part2.explain: clusters reproduce Part 1's step-3a correlation removals for seed 0 (16 removed)
+2026-10-19 15:26:48,359 [INFO] part2.explain: grouped: 30 clusters (11 with >1 member); top-5 ['G33', 'G1', 'G3', 'G6', 'G21']
+2026-10-19 15:26:51,576 [INFO] part2.explain: stability over 10 seeds:
+   group  mean_importance  median_rank  n_top5
+16   G33         0.137582          1.0      10
+0     G1         0.112195          3.0      10
+14    G3         0.107369          2.0      10
+29    G6         0.052100          4.0      10
+5    G17         0.035035          5.5       5
+8    G21         0.029005          5.5       5
+17   G34         0.019444          7.0       0
+6    G18         0.014189          8.0       0
+2026-10-19 15:27:15,948 [INFO] part2.explain: global: 10007 sessions (5007 anomalous); top-5 [33, 4, 1, 5, 3]
+2026-10-19 15:27:15,966 [INFO] part2.explain: clusters reproduce Part 1's step-3a correlation removals for seed 0 (16 removed)
+2026-10-19 15:27:16,354 [INFO] part2.explain: grouped: 30 clusters (11 with >1 member); top-5 ['G33', 'G1', 'G3', 'G6', 'G21']
+2026-10-19 15:27:26,902 [INFO] part2.explain: local: 16 cases (9 FN, 5 FP) -> local_cases.md
+2026-10-19 15:27:39,102 [INFO] part2.explain: global: 10007 sessions (5007 anomalous); top-5 [33, 4, 1, 5, 3]
+2026-10-19 15:27:39,119 [INFO] part2.explain: clusters reproduce Part 1's step-3a correlation removals for seed 0 (16 removed)
+2026-10-19 15:27:39,517 [INFO] part2.explain: grouped: 30 clusters (11 with >1 member); top-5 ['G33', 'G1', 'G3', 'G6', 'G21']
+2026-10-19 15:27:50,618 [INFO] part2.explain: local: 16 cases (9 FN, 5 FP) -> local_cases.md

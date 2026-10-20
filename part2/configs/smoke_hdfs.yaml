@@ -1,0 +1,12 @@
+# Smoke test: 2% of each split, short training. Outputs go to data/smoke, results/smoke, logs/smoke.
+base: configs/part2_hdfs.yaml
+seeds: [0]
+subset: 0.02
+data_root: data/smoke
+results_dir: results/smoke
+logs_dir: logs/smoke
+lstm_overrides: {epochs: 2}
+loggpt:
+  train_samples: 200
+  init_num_epochs: 3
+  logGPT_episode: 2

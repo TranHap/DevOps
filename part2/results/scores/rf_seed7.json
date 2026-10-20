@@ -1,0 +1,34 @@
+{
+  "seed": 7,
+  "model": "rf",
+  "n_train_sessions": 402542,
+  "labels_used": "full",
+  "train_time_s": 0.39531683921813965,
+  "infer_time_s": 0.07067251205444336,
+  "device": "cpu:13th Gen Intel(R) Core(TM) i5-13500HX (20 threads)",
+  "n_test": 172519,
+  "n_test_anomalous": 5108,
+  "threshold": 0.5,
+  "ranked": true,
+  "score_definition": {
+    "label": "RF + MCV",
+    "score": "predict_proba[:, 1]",
+    "rule": ">=",
+    "threshold": "0.5"
+  },
+  "subset": null,
+  "concurrent_processes": 1,
+  "metrics": {
+    "precision": 0.9976539589442815,
+    "recall": 0.9990211433046202,
+    "f1": 0.9983370830480289,
+    "auc": 0.999996064365892,
+    "tp": 5103,
+    "fp": 12,
+    "tn": 167399,
+    "fn": 5
+  },
+  "info": {
+    "n_features": 46
+  }
+}

@@ -1,0 +1,53 @@
+2026-10-19 02:13:30,615 [INFO] part1: === bgl | seed 1 | stage features | model all | split random
+2026-10-19 02:13:31,272 [INFO] part1: BERT embedding cache hit: /mnt/data/Fall26/DevOps/GroupAssignment/part1/data/features/bgl/bert_embeddings.npy
+2026-10-19 02:13:31,441 [INFO] part1: BERT rank: {'n_templates': 421, 'embedding_dim': 768, 'rank': 405, 'rank_centered': 404}
+2026-10-19 02:13:31,464 [INFO] part1: Split random seed=1: train 660 (50.00% anomalous) / test 166 (47.59% anomalous) -> bgl_seed1.json
+2026-10-19 02:13:31,549 [INFO] part1: MCV: 421 templates, 416 in train vocabulary; test events unseen in train: 315 of 1155733 (1 sessions)
+2026-10-19 02:13:32,537 [INFO] part1: === bgl | seed 1 | stage train | model all | split random
+2026-10-19 02:13:33,288 [INFO] part1: [rf] training on 660 sessions (seed 1, split random)
+2026-10-19 02:13:33,448 [INFO] part1: [rf] done in 0.1s, 416 features
+2026-10-19 02:13:33,449 [INFO] part1: [rf_fs] training on 660 sessions (seed 1, split random)
+2026-10-19 02:13:33,533 [INFO] part1: Step 3a: 416 features, 0 constant
+2026-10-19 02:13:34,560 [INFO] part1: Step 3a: 156 correlation clusters -> 156 features after correlation analysis
+2026-10-19 02:15:42,741 [INFO] part1: Step 3a: 32 VIF removals -> 124 features kept (max VIF 4.80)
+2026-10-19 02:15:42,816 [INFO] part1: [rf_fs] done in 129.3s, 124 features
+2026-10-19 02:15:42,817 [INFO] part1: [lstm] training on 660 sessions (seed 1, split random)
+2026-10-19 02:15:44,761 [INFO] part1: Device: cuda (NVIDIA GeForce RTX 4060 Laptop GPU)
+2026-10-19 02:15:44,799 [INFO] part1: LSTM: 594 fit sessions (296 anomalous) -> 63521 windows; 66 val sessions (34 anomalous) -> 8663 windows
+2026-10-19 02:15:46,328 [INFO] part1:   epoch  1 loss 0.4385 | val P 0.532 R 0.971 F1 0.688 | 0.9s
+2026-10-19 02:15:46,880 [INFO] part1:   epoch  2 loss 0.5002 | val P 0.604 R 0.941 F1 0.736 | 0.6s
+2026-10-19 02:15:47,509 [INFO] part1:   epoch  3 loss 0.4833 | val P 0.673 R 0.971 F1 0.795 | 0.6s
+2026-10-19 02:15:48,298 [INFO] part1:   epoch  4 loss 0.3986 | val P 0.744 R 0.941 F1 0.831 | 0.8s
+2026-10-19 02:15:48,955 [INFO] part1:   epoch  5 loss 0.3766 | val P 0.733 R 0.971 F1 0.835 | 0.7s
+2026-10-19 02:15:49,626 [INFO] part1:   epoch  6 loss 0.4018 | val P 0.673 R 0.971 F1 0.795 | 0.7s
+2026-10-19 02:15:50,297 [INFO] part1:   epoch  7 loss 0.4577 | val P 0.550 R 0.971 F1 0.702 | 0.7s
+2026-10-19 02:15:50,900 [INFO] part1:   epoch  8 loss 0.4311 | val P 0.786 R 0.971 F1 0.868 | 0.6s
+2026-10-19 02:15:51,342 [INFO] part1:   epoch  9 loss 0.4378 | val P 0.579 R 0.971 F1 0.725 | 0.4s
+2026-10-19 02:15:52,086 [INFO] part1:   epoch 10 loss 0.4361 | val P 0.780 R 0.941 F1 0.853 | 0.7s
+2026-10-19 02:15:52,750 [INFO] part1:   epoch 11 loss 0.4288 | val P 0.829 R 1.000 F1 0.907 | 0.7s
+2026-10-19 02:15:53,460 [INFO] part1:   epoch 12 loss 0.4512 | val P 0.750 R 0.971 F1 0.846 | 0.7s
+2026-10-19 02:15:54,062 [INFO] part1:   epoch 13 loss 0.4660 | val P 0.596 R 1.000 F1 0.747 | 0.6s
+2026-10-19 02:15:54,589 [INFO] part1:   epoch 14 loss 0.4669 | val P 0.654 R 1.000 F1 0.791 | 0.5s
+2026-10-19 02:15:55,366 [INFO] part1:   epoch 15 loss 0.4796 | val P 0.604 R 0.941 F1 0.736 | 0.8s
+2026-10-19 02:15:55,839 [INFO] part1:   epoch 16 loss 0.5362 | val P 0.582 R 0.941 F1 0.719 | 0.5s
+2026-10-19 02:15:56,530 [INFO] part1:   epoch 17 loss 0.4334 | val P 0.688 R 0.971 F1 0.805 | 0.7s
+2026-10-19 02:15:57,159 [INFO] part1:   epoch 18 loss 0.4367 | val P 0.582 R 0.941 F1 0.719 | 0.6s
+2026-10-19 02:15:57,812 [INFO] part1:   epoch 19 loss 0.4346 | val P 0.642 R 1.000 F1 0.782 | 0.7s
+2026-10-19 02:15:58,378 [INFO] part1:   epoch 20 loss 0.4225 | val P 0.611 R 0.971 F1 0.750 | 0.6s
+2026-10-19 02:15:59,073 [INFO] part1:   epoch 21 loss 0.5058 | val P 0.667 R 0.941 F1 0.780 | 0.7s
+2026-10-19 02:15:59,493 [INFO] part1:   epoch 22 loss 0.4938 | val P 0.586 R 1.000 F1 0.739 | 0.4s
+2026-10-19 02:16:00,260 [INFO] part1:   epoch 23 loss 0.3643 | val P 0.688 R 0.971 F1 0.805 | 0.8s
+2026-10-19 02:16:01,076 [INFO] part1:   epoch 24 loss 0.3665 | val P 0.717 R 0.971 F1 0.825 | 0.8s
+2026-10-19 02:16:01,682 [INFO] part1:   epoch 25 loss 0.3979 | val P 0.654 R 1.000 F1 0.791 | 0.6s
+2026-10-19 02:16:02,247 [INFO] part1:   epoch 26 loss 0.4914 | val P 0.611 R 0.971 F1 0.750 | 0.6s
+2026-10-19 02:16:02,828 [INFO] part1:   epoch 27 loss 0.4688 | val P 0.623 R 0.971 F1 0.759 | 0.6s
+2026-10-19 02:16:03,357 [INFO] part1:   epoch 28 loss 0.5391 | val P 0.635 R 0.971 F1 0.767 | 0.5s
+2026-10-19 02:16:03,913 [INFO] part1:   epoch 29 loss 0.4340 | val P 0.611 R 0.971 F1 0.750 | 0.6s
+2026-10-19 02:16:04,536 [INFO] part1:   epoch 30 loss 0.3465 | val P 0.680 R 1.000 F1 0.810 | 0.6s
+2026-10-19 02:16:04,537 [INFO] part1: LSTM: best epoch 11 (val F1 0.907)
+2026-10-19 02:16:04,681 [INFO] part1: [lstm] done in 19.8s, 768 features
+2026-10-19 02:16:06,084 [INFO] part1: === bgl | seed 1 | stage eval | model all | split random
+2026-10-19 02:16:06,758 [INFO] part1: [rf] P 0.971 R 0.848 F1 0.905 AUC 0.988 (tp 67 fp 2 tn 85 fn 12)
+2026-10-19 02:16:06,767 [INFO] part1: [rf_fs] P 0.961 R 0.937 F1 0.949 AUC 0.983 (tp 74 fp 3 tn 84 fn 5)
+2026-10-19 02:16:06,775 [INFO] part1: [lstm] P 0.755 R 0.975 F1 0.851 AUC 0.959 (tp 77 fp 25 tn 62 fn 2)
+2026-10-19 02:16:06,786 [INFO] part1: [lstm] window-level (package-style) P 0.408 R 0.473 F1 0.438

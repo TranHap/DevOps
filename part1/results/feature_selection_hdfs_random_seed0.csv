@@ -1,0 +1,20 @@
+template_id,template,step,reason,value
+31,<*>:Failed to transfer <*> to <*> got <*>: Connection reset by peer,correlation,correlated with template 30 (rho = 0.926; cluster of 2),0.9258189497876126
+11,BLOCK* NameSystem.allocateBlock: <*>. <*>,correlation,correlated with template 2 (rho = -1.000; cluster of 2),-0.9999999999999999
+19,Exception in receiveBlock for block <*>: Connection reset by peer,correlation,correlated with template 14 (rho = 0.772; cluster of 4),0.7717081253980559
+20,writeBlock <*> received exception <*>: Connection reset by peer,correlation,correlated with template 14 (rho = 0.772; cluster of 4),0.7717081253980559
+24,Exception in receiveBlock for block <*>,correlation,correlated with template 14 (rho = 0.857; cluster of 4),0.8574933092213036
+43,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[closed]. <*> millis timeout left.,correlation,correlated with template 42 (rho = 0.707; cluster of 2),0.7071023896221137
+26,<*>:Exception writing block <*> to mirror <*>,correlation,correlated with template 25 (rho = 0.759; cluster of 2),0.7585614984835142
+28,writeBlock <*> received exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,correlation,correlated with template 27 (rho = 0.791; cluster of 2),0.7905676474535519
+4,Received block <*> of size <*> from <*>,correlation,correlated with template 3 (rho = 0.987; cluster of 3),0.9866351780618992
+16,writeBlock <*> received exception <*>: Could not read from stream,correlation,correlated with template 3 (rho = -0.720; cluster of 3),-0.7203219787814993
+7,<*>:Transmitted block <*> to <*>,correlation,correlated with template 6 (rho = 1.000; cluster of 4),0.9999995119401099
+9,BLOCK* ask <*> to replicate <*> to datanode(s) <*>,correlation,correlated with template 6 (rho = 0.997; cluster of 4),0.9974170763094793
+12,<*> Starting thread to transfer block <*> to <*>,correlation,correlated with template 6 (rho = 0.990; cluster of 4),0.9898822797148038
+5,BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is <*> to <*> size <*>,correlation,correlated with template 1 (rho = 0.949; cluster of 2),0.9486609327419234
+32,BLOCK* NameSystem.delete: <*> is <*> to invalidSet of <*>,correlation,correlated with template 17 (rho = 0.988; cluster of 2),0.9883580067958654
+35,<*>:Got exception while serving <*> to <*>:,correlation,correlated with template 10 (rho = 0.953; cluster of 2),0.953319942065763
+1,Receiving block <*> src: <*> dest: <*>,VIF,VIF = 18.06,18.06435329827632
+14,writeBlock <*> received exception <*>,VIF,VIF = 9.95,9.953080398824513
+25,Changing block file offset of block <*> from <*> to <*> meta file offset to <*>,VIF,VIF = 6.23,6.225026148035241

@@ -1,0 +1,41 @@
+template_id,template,step,reason,value
+96,"PrepareForService shutting down Node card(mLctn(R10-M1-N2), mCardSernum(<*>), mLp(<*>:<*>:E9:1F:<*>), mIp(<*>), mType(<*>)) as part of Service Action <*>",correlation,correlated with template 92 (rho = 0.706; cluster of 2),0.7056006947456415
+101,size of scratchpad portion of L3.........<*> (<*>),correlation,correlated with template 97 (rho = 0.709; cluster of 2),0.7086096665827161
+55,"rts: kernel terminated for reason 1001rts: bad message header: invalid cpu, type=<*>, cpu=<*>, index=<*>, total=<*>",correlation,correlated with template 39 (rho = 0.706; cluster of 2),0.7056006947456415
+17,exception syndrome register: <*>,correlation,correlated with template 16 (rho = 0.707; cluster of 5),0.707100324386416
+18,data store interrupt caused by <*>,correlation,correlated with template 16 (rho = 0.868; cluster of 5),0.8678712485415938
+23,auxiliary processor.........................<*>,correlation,correlated with template 16 (rho = 0.868; cluster of 5),0.8678344233049794
+45,program interrupt,correlation,correlated with template 16 (rho = 0.704; cluster of 5),0.70402709329843
+13,instruction address: <*>,correlation,correlated with template 12 (rho = 0.818; cluster of 4),0.8182047791337601
+14,data address: <*>,correlation,correlated with template 12 (rho = 1.000; cluster of 4),0.9999999999999999
+15,machine check: i-fetch......................<*>,correlation,correlated with template 12 (rho = 1.000; cluster of 4),0.9999999999999999
+6,force <*> alignment...............<*>,correlation,correlated with template 29 (rho = 0.706; cluster of 22),0.7056006947456415
+19,store operation.............................<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+20,machine state register: <*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+21,"problem state (<*>=sup,<*>=usr).......<*>",correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+22,floating point instr. enabled.....<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+24,machine check enable..............<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+25,floating pt ex mode <*> enable......<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+26,debug interrupt enable............<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+27,byte ordering exception.....................<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+28,data address space................<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+30,program interrupt: fp cr update.............<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+31,guaranteed <*> cache block <*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+32,program interrupt: fp cr field .............<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+33,icache prefetch <*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+34,wait state enable.................<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+35,critical input interrupt enable...<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+36,special purpose registers:,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+37,lr:<*> cr:<*> xer:<*> ctr:<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+38,rts internal error,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+40,instruction address space.........<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+41,disable store gathering..................<*>,correlation,correlated with template 29 (rho = 1.000; cluster of 22),1.0
+58,NodeCard is not fully functional,correlation,correlated with template 57 (rho = 1.000; cluster of 3),1.0
+59,"Node card status: ALERT <*>, ALERT <*>, ALERT <*>, ALERT <*> is (are) active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD is asserted. PGOOD error latch is clear. MPGOOD is OK. MPGOOD error latch is clear. The <*> volt rail is OK. The <*> volt rail is OK.",correlation,correlated with template 57 (rho = 1.000; cluster of 3),1.0
+86,Lustre mount FAILED : <*> : block_id : location,correlation,correlated with template 98 (rho = 0.706; cluster of 3),0.7056006947456415
+99,minus normalized number..................<*>,correlation,correlated with template 98 (rho = 0.706; cluster of 3),0.7056006947456415
+56,<*> floating point alignment exceptions,correlation,correlated with template 70 (rho = 0.743; cluster of 2),0.7430503938802719
+93,<*> microseconds spent in the rbs signal handler during <*> calls. <*> microseconds was the maximum time for a single instance of a correctable ddr.,correlation,correlated with template 94 (rho = 1.000; cluster of 2),0.9999999999999999
+64,rts <*> link training failed: wanted: B C X+ X- Y+ Y- Z+ Z- got: B C X- Y- Z+ Z-,VIF,VIF = 8.31,8.305648609243534
+29,core configuration register: <*>,VIF,VIF = 7.91,7.909010886219265
+76,rts: bad message header: expecting type <*> instead of type <*> (softheader=<*>) PSR0=<*> PSR1=<*> PRXF=<*> PIXF=<*>,VIF,VIF = 7.02,7.017050956722422

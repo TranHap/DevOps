@@ -1,0 +1,53 @@
+members,n_seeds_present,mean_importance,median_rank,n_top5,seeds,member_templates
+33,10,0.13758206252303282,2.0,10,0 1 2 3 4 5 6 7 8 9,Unexpected error trying to delete block <*>. BlockInfo not found in volumeMap.
+6 7 9 12,10,0.0521004471983032,3.0,10,0 1 2 3 4 5 6 7 8 9,Received block <*> src: <*> dest: <*> of size <*> | <*>:Transmitted block <*> to <*> | BLOCK* ask <*> to replicate <*> to datanode(s) <*> | <*> Starting thread to transfer block <*> to <*>
+21,10,0.029005251880261106,5.0,10,0 1 2 3 4 5 6 7 8 9,BLOCK* NameSystem.addStoredBlock: Redundant addStoredBlock request received for <*> on <*> size <*>
+1 3 4 5,7,0.21327241286105614,1.0,7,2 3 4 5 6 7 9,Receiving block <*> src: <*> dest: <*> | PacketResponder <*> for block <*> <*> | Received block <*> of size <*> from <*> | BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is <*> to <*> size <*>
+17 32,10,0.03503479100458458,4.5,7,0 1 2 3 4 5 6 7 8 9,Deleting block <*> file <*> | BLOCK* NameSystem.delete: <*> is <*> to invalidSet of <*>
+1 5,3,0.1205092684229921,2.0,3,0 1 8,Receiving block <*> src: <*> dest: <*> | BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is <*> to <*> size <*>
+3 4 16,3,0.10460195053479611,3.0,3,0 1 8,PacketResponder <*> for block <*> <*> | Received block <*> of size <*> from <*> | writeBlock <*> received exception <*>: Could not read from stream
+34,10,0.019444318683197133,6.0,0,0 1 2 3 4 5 6 7 8 9,BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.
+18,10,0.014188948315538302,7.0,0,0 1 2 3 4 5 6 7 8 9,Receiving empty packet for block <*>
+10 35,10,0.0057577701739645465,8.5,0,0 1 2 3 4 5 6 7 8 9,<*> Served block <*> to <*> | <*>:Got exception while serving <*> to <*>:
+16,7,0.0032560553701678416,9.0,0,2 3 4 5 6 7 9,writeBlock <*> received exception <*>: Could not read from stream
+13,10,0.0009837052363791557,10.0,0,0 1 2 3 4 5 6 7 8 9,Verification succeeded for <*>
+14 24,1,0.000529688960719591,10.0,0,5,writeBlock <*> received exception <*> | Exception in receiveBlock for block <*>
+23 24,1,0.0004644909659493132,10.0,0,7,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left. | Exception in receiveBlock for block <*>
+14 19 20 24,3,0.00034556275573466576,11.0,0,0 6 8,writeBlock <*> received exception <*> | Exception in receiveBlock for block <*>: Connection reset by peer | writeBlock <*> received exception <*>: Connection reset by peer | Exception in receiveBlock for block <*>
+14 19 20,1,0.00020693075687101763,13.0,0,7,writeBlock <*> received exception <*> | Exception in receiveBlock for block <*>: Connection reset by peer | writeBlock <*> received exception <*>: Connection reset by peer
+41,10,0.0001952326938054001,12.0,0,0 1 2 3 4 5 6 7 8 9,PendingReplicationMonitor timed out block <*>
+19 20,5,0.00019471830364928549,13.0,0,2 3 4 5 9,Exception in receiveBlock for block <*>: Connection reset by peer | writeBlock <*> received exception <*>: Connection reset by peer
+15 19 20,1,0.0001851218278649848,15.0,0,1,PacketResponder <*> Exception <*> | Exception in receiveBlock for block <*>: Connection reset by peer | writeBlock <*> received exception <*>: Connection reset by peer
+8,10,0.00017490403870648586,12.0,0,0 1 2 3 4 5 6 7 8 9,"<*> Starting thread to transfer block <*> to <*>, <*>"
+14 23 24,5,0.000152363058477545,13.0,0,1 2 3 4 9,writeBlock <*> received exception <*> | PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left. | Exception in receiveBlock for block <*>
+25 26 27,2,8.883691599043887e-05,14.0,0,2 6,Changing block file offset of block <*> from <*> to <*> meta file offset to <*> | <*>:Exception writing block <*> to mirror <*> | Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+30 31,10,8.49697743930612e-05,15.0,0,0 1 2 3 4 5 6 7 8 9,"writeBlock <*> received exception <*>: Block <*> is valid, and cannot be written to. | <*>:Failed to transfer <*> to <*> got <*>: Connection reset by peer"
+25 26,4,8.104931362204164e-05,14.0,0,0 1 8 9,Changing block file offset of block <*> from <*> to <*> meta file offset to <*> | <*>:Exception writing block <*> to mirror <*>
+37 38,1,7.691650285817098e-05,16.0,0,7,Exception in receiveBlock for block <*>: <*> millis timeout while waiting for channel to be ready for write. ch : <*>[connected local=<*> remote=<*>] | writeBlock <*> received exception <*>: <*> millis timeout while waiting for channel to be ready for <*> ch : <*>[connected local=<*> remote=<*>]
+22 25 26,1,6.059943765784448e-05,14.0,0,5,PacketResponder <*> Exception <*>: <*> millis timeout while waiting for channel to be ready for read. ch : <*>[connected local=<*> remote=<*>] | Changing block file offset of block <*> from <*> to <*> meta file offset to <*> | <*>:Exception writing block <*> to mirror <*>
+22 25,3,4.791983982191394e-05,16.0,0,3 4 7,PacketResponder <*> Exception <*>: <*> millis timeout while waiting for channel to be ready for read. ch : <*>[connected local=<*> remote=<*>] | Changing block file offset of block <*> from <*> to <*> meta file offset to <*>
+22,6,1.9034802633184794e-05,18.5,0,0 1 2 6 8 9,PacketResponder <*> Exception <*>: <*> millis timeout while waiting for channel to be ready for read. ch : <*>[connected local=<*> remote=<*>]
+15,9,1.8813420698974054e-05,22.0,0,0 2 3 4 5 6 7 8 9,PacketResponder <*> Exception <*>
+38,9,1.7498037428117864e-05,17.0,0,0 1 2 3 4 5 6 8 9,writeBlock <*> received exception <*>: <*> millis timeout while waiting for channel to be ready for <*> ch : <*>[connected local=<*> remote=<*>]
+26 27,1,1.3626571150383981e-05,18.0,0,3,<*>:Exception writing block <*> to mirror <*> | Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+45,10,1.0732022189140025e-05,21.0,0,0 1 2 3 4 5 6 7 8 9,Adding an already existing block <*>
+2 11,10,7.728070178214205e-06,19.0,0,0 1 2 3 4 5 6 7 8 9,BLOCK* NameSystem.allocateBlock: <*> | BLOCK* NameSystem.allocateBlock: <*>. <*>
+26,2,6.970403812590073e-06,20.5,0,4 7,<*>:Exception writing block <*> to mirror <*>
+29,10,4.664324175728442e-06,19.5,0,0 1 2 3 4 5 6 7 8 9,PacketResponder <*> Exception <*>: Broken pipe
+23,4,4.302284735323362e-06,22.0,0,0 5 6 8,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+40,10,4.183580363169234e-06,20.0,0,0 1 2 3 4 5 6 7 8 9,BLOCK* Removing block <*> from neededReplications as it does not belong to any file.
+27 43,1,4.070380330399602e-06,20.0,0,4,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left. | PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[closed]. <*> millis timeout left.
+36,10,3.1297747629112463e-07,22.5,0,0 1 2 3 4 5 6 7 8 9,PacketResponder <*> Exception <*>: Connection reset by peer
+27 42 43,1,3.0476549193477513e-07,22.0,0,8,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left. | writeBlock <*> received exception <*>: <*> <*> | PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[closed]. <*> millis timeout left.
+39,10,1.4063572572256264e-07,22.5,0,0 1 2 3 4 5 6 7 8 9,Reopen Block <*>
+27 28,2,2.0896959898027813e-08,23.0,0,0 7,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left. | writeBlock <*> received exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+27,2,0.0,22.0,0,1 5,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+27 42,1,0.0,23.0,0,9,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left. | writeBlock <*> received exception <*>: <*> <*>
+28,8,0.0,23.0,0,1 2 3 4 5 6 8 9,writeBlock <*> received exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+37,9,0.0,23.0,0,0 1 2 3 4 5 6 8 9,Exception in receiveBlock for block <*>: <*> millis timeout while waiting for channel to be ready for write. ch : <*>[connected local=<*> remote=<*>]
+42,7,0.0,23.0,0,1 2 3 4 5 6 7,writeBlock <*> received exception <*>: <*> <*>
+42 43,1,0.0,23.0,0,0,writeBlock <*> received exception <*>: <*> <*> | PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[closed]. <*> millis timeout left.
+43,6,0.0,22.5,0,1 2 3 5 6 9,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[closed]. <*> millis timeout left.
+44,4,0.0,23.5,0,0 4 6 7,writeBlock <*> received exception <*>: No route to host
+46,9,0.0,23.0,0,0 1 2 3 5 6 7 8 9,Exception in receiveBlock for block <*>: Broken pipe
+47,8,0.0,23.0,0,1 2 3 5 6 7 8 9,PacketResponder <*> Exception <*>: The stream is closed

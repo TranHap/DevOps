@@ -1,0 +1,7 @@
+data/
+.hf_cache/
+logs/*_stdout.log
+__pycache__/
+*.pyc
+LOG6309E_group_presentation_IGNOREIT.pptx
+GroupAssignment_Fall2025.pdf

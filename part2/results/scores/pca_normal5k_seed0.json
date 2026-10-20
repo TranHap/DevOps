@@ -1,0 +1,38 @@
+{
+  "seed": 0,
+  "model": "pca_normal5k",
+  "n_train_sessions": 5000,
+  "labels_used": "normal-only filter",
+  "train_time_s": 0.002393960952758789,
+  "infer_time_s": 0.03580617904663086,
+  "device": "cpu:13th Gen Intel(R) Core(TM) i5-13500HX (20 threads)",
+  "n_test": 172519,
+  "n_test_anomalous": 5007,
+  "threshold": 14.62451432819635,
+  "ranked": false,
+  "score_definition": {
+    "label": "PCA (5,000 normal)",
+    "score": "SPE (squared prediction error)",
+    "rule": ">",
+    "threshold": "Q-statistic"
+  },
+  "subset": null,
+  "metrics": {
+    "precision": 0.7969323107702567,
+    "recall": 0.4773317355702017,
+    "f1": 0.5970522108418685,
+    "auc": 0.8634291981912556,
+    "tp": 2390,
+    "fp": 609,
+    "tn": 166903,
+    "fn": 2617
+  },
+  "info": {
+    "n_features": 15,
+    "n_components": 3,
+    "explained_variance": 0.9635241330499598,
+    "threshold": 14.62451432819635,
+    "c_alpha": 3.2905,
+    "n_components_param": 0.95
+  }
+}

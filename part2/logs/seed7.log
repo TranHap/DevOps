@@ -1,0 +1,90 @@
+2026-10-19 15:17:51,592 [INFO] part2.seed7: === config part2_hdfs.yaml | seed 7 | models ['rf', 'lstm', 'pca']
+2026-10-19 15:17:51,818 [INFO] part2.seed7: Split random seed=7: train 402542 (2.91% anomalous) / test 172519 (2.96% anomalous) -> hdfs_seed7.json
+2026-10-19 15:17:51,874 [INFO] part2.seed7: seed 7: train 402542 (11730 anomalous) / test 172519 (5108 anomalous)
+2026-10-19 15:17:51,874 [INFO] part2.seed7: [rf] seed 7: training
+2026-10-19 15:17:52,455 [INFO] part2.seed7: [rf] seed 7: P 0.9977 R 0.9990 F1 0.9983 AUC 1.0000 (tp 5103 fp 12 tn 167399 fn 5) | train 0.4s infer 0.1s
+2026-10-19 15:17:52,461 [INFO] part2.seed7: [lstm] seed 7: training
+2026-10-19 15:17:52,461 [INFO] part2.seed7: Device: cuda (NVIDIA GeForce RTX 4060 Laptop GPU)
+2026-10-19 15:17:52,632 [INFO] part2.seed7: LSTM: 362288 fit sessions (10561 anomalous) -> 402934 windows; 40254 val sessions (1169 anomalous) -> 45259 windows
+2026-10-19 15:17:55,215 [INFO] part2.seed7:   epoch  1 loss 0.1635 | val P 0.888 R 0.999 F1 0.940 | 2.6s
+2026-10-19 15:17:57,821 [INFO] part2.seed7:   epoch  2 loss 0.0533 | val P 0.928 R 0.999 F1 0.963 | 2.6s
+2026-10-19 15:18:00,416 [INFO] part2.seed7:   epoch  3 loss 0.0540 | val P 0.959 R 0.999 F1 0.979 | 2.6s
+2026-10-19 15:18:03,023 [INFO] part2.seed7:   epoch  4 loss 0.0516 | val P 0.938 R 0.999 F1 0.968 | 2.6s
+2026-10-19 15:18:05,667 [INFO] part2.seed7:   epoch  5 loss 0.0607 | val P 0.898 R 0.999 F1 0.946 | 2.6s
+2026-10-19 15:18:08,231 [INFO] part2.seed7:   epoch  6 loss 0.0572 | val P 0.961 R 0.999 F1 0.979 | 2.6s
+2026-10-19 15:18:10,842 [INFO] part2.seed7:   epoch  7 loss 0.0627 | val P 0.880 R 0.999 F1 0.936 | 2.6s
+2026-10-19 15:18:13,452 [INFO] part2.seed7:   epoch  8 loss 0.2838 | val P 0.797 R 0.999 F1 0.887 | 2.6s
+2026-10-19 15:18:16,012 [INFO] part2.seed7:   epoch  9 loss 0.0682 | val P 0.884 R 0.999 F1 0.938 | 2.6s
+2026-10-19 15:18:18,671 [INFO] part2.seed7:   epoch 10 loss 0.0699 | val P 0.899 R 0.999 F1 0.947 | 2.7s
+2026-10-19 15:18:21,232 [INFO] part2.seed7:   epoch 11 loss 0.0610 | val P 0.885 R 0.999 F1 0.939 | 2.6s
+2026-10-19 15:18:23,824 [INFO] part2.seed7:   epoch 12 loss 0.0584 | val P 0.665 R 0.999 F1 0.798 | 2.6s
+2026-10-19 15:18:26,394 [INFO] part2.seed7:   epoch 13 loss 0.0538 | val P 0.950 R 0.999 F1 0.974 | 2.6s
+2026-10-19 15:18:28,998 [INFO] part2.seed7:   epoch 14 loss 0.0497 | val P 0.903 R 0.999 F1 0.949 | 2.6s
+2026-10-19 15:18:31,601 [INFO] part2.seed7:   epoch 15 loss 0.0532 | val P 0.953 R 0.999 F1 0.975 | 2.6s
+2026-10-19 15:18:34,232 [INFO] part2.seed7:   epoch 16 loss 0.1109 | val P 0.792 R 0.999 F1 0.884 | 2.6s
+2026-10-19 15:18:36,842 [INFO] part2.seed7:   epoch 17 loss 0.0579 | val P 0.746 R 0.999 F1 0.854 | 2.6s
+2026-10-19 15:18:39,434 [INFO] part2.seed7:   epoch 18 loss 0.0537 | val P 0.896 R 0.999 F1 0.945 | 2.6s
+2026-10-19 15:18:42,081 [INFO] part2.seed7:   epoch 19 loss 0.0558 | val P 0.767 R 0.999 F1 0.868 | 2.6s
+2026-10-19 15:18:44,741 [INFO] part2.seed7:   epoch 20 loss 0.0525 | val P 0.895 R 0.999 F1 0.944 | 2.7s
+2026-10-19 15:18:47,329 [INFO] part2.seed7:   epoch 21 loss 0.0537 | val P 0.891 R 0.999 F1 0.942 | 2.6s
+2026-10-19 15:18:49,980 [INFO] part2.seed7:   epoch 22 loss 0.0536 | val P 0.952 R 0.999 F1 0.975 | 2.7s
+2026-10-19 15:18:52,595 [INFO] part2.seed7:   epoch 23 loss 0.0509 | val P 0.503 R 0.999 F1 0.669 | 2.6s
+2026-10-19 15:18:55,209 [INFO] part2.seed7:   epoch 24 loss 0.0540 | val P 0.917 R 0.999 F1 0.956 | 2.6s
+2026-10-19 15:18:57,837 [INFO] part2.seed7:   epoch 25 loss 0.0538 | val P 0.933 R 0.999 F1 0.965 | 2.6s
+2026-10-19 15:19:00,423 [INFO] part2.seed7:   epoch 26 loss 0.0489 | val P 0.933 R 0.999 F1 0.965 | 2.6s
+2026-10-19 15:19:03,102 [INFO] part2.seed7:   epoch 27 loss 0.0541 | val P 0.945 R 0.999 F1 0.971 | 2.7s
+2026-10-19 15:19:05,697 [INFO] part2.seed7:   epoch 28 loss 0.0508 | val P 0.929 R 0.999 F1 0.963 | 2.6s
+2026-10-19 15:19:08,251 [INFO] part2.seed7:   epoch 29 loss 0.0477 | val P 0.536 R 0.999 F1 0.698 | 2.6s
+2026-10-19 15:19:10,790 [INFO] part2.seed7:   epoch 30 loss 0.0462 | val P 0.953 R 0.999 F1 0.975 | 2.5s
+2026-10-19 15:19:10,791 [INFO] part2.seed7: LSTM: best epoch 6 (val F1 0.979)
+2026-10-19 15:19:11,489 [INFO] part2.seed7: [lstm] seed 7: P 0.9598 R 0.9992 F1 0.9791 AUC 0.9997 (tp 5104 fp 214 tn 167197 fn 4) | train 78.3s infer 0.6s
+2026-10-19 15:19:11,496 [INFO] part2.seed7: [pca] seed 7: training
+2026-10-19 15:19:11,785 [INFO] part2.seed7: PCA: 46 features, 5 components (0.9632 of variance), SPE threshold 3.8518
+2026-10-19 15:19:12,009 [INFO] part2.seed7: [pca] seed 7: P 0.9719 R 0.6357 F1 0.7686 AUC 0.9583 (tp 3247 fp 94 tn 167317 fn 1861) | train 0.3s infer 0.1s
+2026-10-19 15:19:12,087 [INFO] part2.seed7: seed 7: identical test sessions (172519) in 3 score files
+2026-10-19 21:56:30,909 [INFO] part2.seed7: === config part2_hdfs.yaml | seed 7 | models ['loggpt']
+2026-10-19 21:56:31,119 [INFO] part2.seed7: seed 7: train 402542 (11730 anomalous) / test 172519 (5108 anomalous)
+2026-10-19 21:56:31,119 [INFO] part2.seed7: [loggpt] seed 7: training
+2026-10-19 21:56:31,144 [INFO] part2.seed7: LogGPT: 5000 normal sessions, 16 unique keys -> vocab 21, K = int(16 x 0.50) = 8
+2026-10-19 21:56:33,539 [INFO] part2.seed7:   pre-train epoch   0  train loss 1.5350  val loss 0.9252  (2.4s)
+2026-10-19 21:56:57,191 [INFO] part2.seed7:   pre-train epoch  10  train loss 0.2072  val loss 0.2036  (2.4s)
+2026-10-19 21:57:21,046 [INFO] part2.seed7:   pre-train epoch  20  train loss 0.1854  val loss 0.1874  (2.4s)
+2026-10-19 21:57:44,795 [INFO] part2.seed7:   pre-train epoch  30  train loss 0.1774  val loss 0.1810  (2.3s)
+2026-10-19 21:58:08,525 [INFO] part2.seed7:   pre-train epoch  40  train loss 0.1738  val loss 0.1791  (2.3s)
+2026-10-19 21:58:32,469 [INFO] part2.seed7:   pre-train epoch  50  train loss 0.1712  val loss 0.1776  (2.4s)
+2026-10-19 21:58:56,267 [INFO] part2.seed7:   pre-train epoch  60  train loss 0.1692  val loss 0.1766  (2.4s)
+2026-10-19 21:59:20,190 [INFO] part2.seed7:   pre-train epoch  70  train loss 0.1683  val loss 0.1764  (2.4s)
+2026-10-19 21:59:43,918 [INFO] part2.seed7:   pre-train epoch  80  train loss 0.1675  val loss 0.1759  (2.4s)
+2026-10-19 22:00:07,427 [INFO] part2.seed7:   pre-train epoch  90  train loss 0.1665  val loss 0.1763  (2.4s)
+2026-10-19 22:00:28,439 [INFO] part2.seed7:   pre-train epoch  99  train loss 0.1661  val loss 0.1764  (2.3s)
+2026-10-19 22:00:28,439 [INFO] part2.seed7: LogGPT pre-training done in 237.3s; best val loss at epoch 80 (0.1759), last epoch 0.1764 is used
+2026-10-19 22:00:58,954 [INFO] part2.seed7: LogGPT RL: initial val loss 718.4129 (30.5s)
+2026-10-19 22:06:45,190 [INFO] part2.seed7:   RL episode  0  val loss 503.2960  rel.impr. +0.4274  count 0  saved (346.2s)
+2026-10-19 22:12:26,967 [INFO] part2.seed7:   RL episode  1  val loss 360.9285  rel.impr. +0.3944  count 0  saved (341.7s)
+2026-10-19 22:18:08,866 [INFO] part2.seed7:   RL episode  2  val loss 333.5505  rel.impr. +0.0821  count 0  saved (341.9s)
+2026-10-19 22:23:50,875 [INFO] part2.seed7:   RL episode  3  val loss 319.9988  rel.impr. +0.0423  count 0  saved (342.0s)
+2026-10-19 22:29:33,042 [INFO] part2.seed7:   RL episode  4  val loss 318.8627  rel.impr. +0.0036  count 1  saved (342.1s)
+2026-10-19 22:35:14,247 [INFO] part2.seed7:   RL episode  5  val loss 323.4174  rel.impr. -0.0141  count 2   (341.2s)
+2026-10-19 22:40:55,782 [INFO] part2.seed7:   RL episode  6  val loss 316.0338  rel.impr. +0.0234  count 2  saved (341.5s)
+2026-10-19 22:46:36,843 [INFO] part2.seed7:   RL episode  7  val loss 316.3055  rel.impr. -0.0009  count 3   (341.0s)
+2026-10-19 22:52:18,015 [INFO] part2.seed7:   RL episode  8  val loss 315.4755  rel.impr. +0.0026  count 4  saved (341.1s)
+2026-10-19 22:52:18,015 [INFO] part2.seed7:   RL early stop after episode 8
+2026-10-19 22:52:19,946 [INFO] part2.seed7: [loggpt_norl] verification on 349 test sessions (98 with <unk>): batched vs original 0 mismatches; official score vs original: 0 mismatches without <unk>, 0 with <unk> (rule); <unk> rule changes 0 of 172519 test decisions
+2026-10-19 22:52:21,804 [INFO] part2.seed7: [loggpt] verification on 349 test sessions (98 with <unk>): batched vs original 0 mismatches; official score vs original: 0 mismatches without <unk>, 0 with <unk> (rule); <unk> rule changes 0 of 172519 test decisions
+2026-10-19 22:52:21,942 [INFO] part2.seed7: [loggpt_norl] seed 7: P 0.9570 R 0.7792 F1 0.8590 AUC 0.9591 (tp 3980 fp 179 tn 167232 fn 1128) | train 237.3s infer 0.5s
+2026-10-19 22:52:22,052 [INFO] part2.seed7: [loggpt] seed 7: P 0.9036 R 0.7341 F1 0.8101 AUC 0.9988 (tp 3750 fp 400 tn 167011 fn 1358) | train 3346.9s infer 0.5s
+2026-10-19 22:52:22,204 [INFO] part2.seed7: seed 7: identical test sessions (172519) in 5 score files
+2026-10-20 00:52:26,807 [INFO] part2.seed7: === config part2_hdfs.yaml | seed 7 | models ['rf', 'lstm', 'pca', 'loggpt', 'pca_normal5k']
+2026-10-20 00:52:26,808 [INFO] part2.seed7: [rf] seed 7: cached, skipped
+2026-10-20 00:52:26,809 [INFO] part2.seed7: [lstm] seed 7: cached, skipped
+2026-10-20 00:52:26,809 [INFO] part2.seed7: [pca] seed 7: cached, skipped
+2026-10-20 00:52:26,809 [INFO] part2.seed7: [loggpt] seed 7: cached, skipped
+2026-10-20 00:52:26,969 [INFO] part2.seed7: seed 7: train 402542 (11730 anomalous) / test 172519 (5108 anomalous)
+2026-10-20 00:52:27,112 [INFO] part2.seed7: seed 7: identical test sessions (172519) in 5 score files
+2026-10-20 00:53:40,063 [INFO] part2.seed7: === config part2_hdfs.yaml | seed 7 | models ['rf', 'lstm', 'pca', 'loggpt', 'pca_normal5k']
+2026-10-20 00:53:40,065 [INFO] part2.seed7: [rf] seed 7: cached, skipped
+2026-10-20 00:53:40,065 [INFO] part2.seed7: [lstm] seed 7: cached, skipped
+2026-10-20 00:53:40,065 [INFO] part2.seed7: [pca] seed 7: cached, skipped
+2026-10-20 00:53:40,066 [INFO] part2.seed7: [loggpt] seed 7: cached, skipped
+2026-10-20 00:53:40,222 [INFO] part2.seed7: seed 7: train 402542 (11730 anomalous) / test 172519 (5108 anomalous)
+2026-10-20 00:53:40,350 [INFO] part2.seed7: seed 7: identical test sessions (172519) in 5 score files

@@ -1,0 +1,41 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "n_normal_per_seed": 5000,
+  "grouping": "seed-0 correlation clusters for every seed",
+  "own_clusters_identical_to_seed0": {
+    "0": true,
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false,
+    "6": false,
+    "7": false,
+    "8": false,
+    "9": false
+  },
+  "adjusted_rand_index_vs_seed0": {
+    "0": 1.0,
+    "1": 0.7675728975912101,
+    "2": 0.6439009037363428,
+    "3": 0.6134411318847903,
+    "4": 0.6134411318847903,
+    "5": 0.674602056627694,
+    "6": 0.7867298578199052,
+    "7": 0.7043961596766043,
+    "8": 0.9346189406947563,
+    "9": 0.6589186457806974
+  },
+  "robustness_file": "stability_own_clusters.csv (each seed's own clusters)"
+}

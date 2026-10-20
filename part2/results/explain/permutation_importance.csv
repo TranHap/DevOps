@@ -1,0 +1,47 @@
+template_id,template,perm_importance_f1_mean,perm_importance_f1_std,mean_abs_shap,group,rank_perm,rank_shap
+33,Unexpected error trying to delete block <*>. BlockInfo not found in volumeMap.,0.20915737229818684,0.002002118093556414,0.1386334960519172,G33,1,1
+5,BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is <*> to <*> size <*>,0.09807880810944633,0.0018445083751247357,0.05800612439519663,G1,2,4
+9,BLOCK* ask <*> to replicate <*> to datanode(s) <*>,0.047083587567232785,0.0012022812097972134,0.02932949627417194,G6,3,7
+21,BLOCK* NameSystem.addStoredBlock: Redundant addStoredBlock request received for <*> on <*> size <*>,0.04297808000531963,0.0008661282669238789,0.02939289333871737,G21,4,6
+18,Receiving empty packet for block <*>,0.022217108425147535,0.0005089557432778102,0.015238394731584276,G18,5,9
+17,Deleting block <*> file <*>,0.017584351939306575,0.0013885929042081872,0.02705819965869172,G17,6,8
+35,<*>:Got exception while serving <*> to <*>:,0.0033025764951692517,0.0007802182208392168,0.00291001441467127,G10,7,16
+34,BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.,0.0008904888863635274,6.985881822216185e-05,0.01215444950509205,G34,8,11
+7,<*>:Transmitted block <*> to <*>,0.0007866965403046988,0.00012965173453779804,0.011430964212199819,G6,9,12
+32,BLOCK* NameSystem.delete: <*> is <*> to invalidSet of <*>,0.0006408360269530733,0.00020631182522017318,0.01466514589691882,G17,10,10
+10,<*> Served block <*> to <*>,0.0003100429663131066,0.00015147783773450908,0.0027522517487423488,G10,11,17
+13,Verification succeeded for <*>,0.00011008693793079782,9.44153402820697e-05,0.000470978224207411,G13,12,18
+12,<*> Starting thread to transfer block <*> to <*>,8.005595122737575e-05,4.0027975613687874e-05,0.009216797472030417,G6,13,13
+3,PacketResponder <*> for block <*> <*>,6.0041963420531805e-05,4.902405784505181e-05,0.036980171744389424,G3,14,5
+11,BLOCK* NameSystem.allocateBlock: <*>. <*>,0.0,0.0,7.895402372104095e-07,G2,15,33
+6,Received block <*> src: <*> dest: <*> of size <*>,0.0,0.0,0.002938007559295934,G6,15,15
+24,Exception in receiveBlock for block <*>,0.0,0.0,3.35060850705016e-06,G14,15,31
+25,Changing block file offset of block <*> from <*> to <*> meta file offset to <*>,0.0,0.0,8.952061380012275e-05,G25,15,20
+16,writeBlock <*> received exception <*>: Could not read from stream,0.0,0.0,0.004896226404211008,G3,15,14
+15,PacketResponder <*> Exception <*>,0.0,0.0,1.58029025357268e-07,G15,15,35
+20,writeBlock <*> received exception <*>: Connection reset by peer,0.0,0.0,2.2018892970303267e-05,G14,15,26
+22,PacketResponder <*> Exception <*>: <*> millis timeout while waiting for channel to be ready for read. ch : <*>[connected local=<*> remote=<*>],0.0,0.0,0.0,G22,15,36
+23,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,0.0,0.0,1.720913894129345e-05,G23,15,27
+19,Exception in receiveBlock for block <*>: Connection reset by peer,0.0,0.0,6.998245976017277e-05,G14,15,21
+28,writeBlock <*> received exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,0.0,0.0,0.0,G27,15,36
+29,PacketResponder <*> Exception <*>: Broken pipe,0.0,0.0,8.289746842157465e-06,G29,15,28
+27,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,0.0,0.0,0.0,G27,15,36
+26,<*>:Exception writing block <*> to mirror <*>,0.0,0.0,0.0,G25,15,36
+30,"writeBlock <*> received exception <*>: Block <*> is valid, and cannot be written to.",0.0,0.0,8.211927816792244e-06,G30,15,29
+14,writeBlock <*> received exception <*>,0.0,0.0,0.00023630210358674379,G14,15,19
+8,"<*> Starting thread to transfer block <*> to <*>, <*>",0.0,0.0,3.7951357806881105e-05,G8,15,23
+2,BLOCK* NameSystem.allocateBlock: <*>,0.0,0.0,3.712405017161028e-06,G2,15,30
+41,PendingReplicationMonitor timed out block <*>,0.0,0.0,3.511271192332248e-05,G41,15,24
+42,writeBlock <*> received exception <*>: <*> <*>,0.0,0.0,0.0,G42,15,36
+31,<*>:Failed to transfer <*> to <*> got <*>: Connection reset by peer,0.0,0.0,2.8959141999077012e-05,G30,15,25
+36,PacketResponder <*> Exception <*>: Connection reset by peer,0.0,0.0,0.0,G36,15,36
+37,Exception in receiveBlock for block <*>: <*> millis timeout while waiting for channel to be ready for write. ch : <*>[connected local=<*> remote=<*>],0.0,0.0,0.0,G37,15,36
+38,writeBlock <*> received exception <*>: <*> millis timeout while waiting for channel to be ready for <*> ch : <*>[connected local=<*> remote=<*>],0.0,0.0,6.064729663376883e-05,G38,15,22
+39,Reopen Block <*>,0.0,0.0,3.4933515767000024e-07,G39,15,34
+40,BLOCK* Removing block <*> from neededReplications as it does not belong to any file.,0.0,0.0,2.3083907170091097e-06,G40,15,32
+45,Adding an already existing block <*>,0.0,0.0,0.0,G45,15,36
+46,Exception in receiveBlock for block <*>: Broken pipe,0.0,0.0,0.0,G46,15,36
+43,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[closed]. <*> millis timeout left.,0.0,0.0,0.0,G42,15,36
+44,writeBlock <*> received exception <*>: No route to host,0.0,0.0,0.0,G44,15,36
+1,Receiving block <*> src: <*> dest: <*>,-4.0015973222273796e-05,8.004694952754754e-05,0.06433987335902736,G1,45,3
+4,Received block <*> of size <*> from <*>,-0.0001100489291569029,7.002724119903508e-05,0.06443543426817572,G3,46,2

@@ -1,0 +1,9 @@
+{
+  "seed": 0,
+  "n_anomalous": 5007,
+  "n_normal": 5000,
+  "n_normal_requested": 5000,
+  "sampling": "all anomalous test sessions + normal test sessions drawn with numpy default_rng(seed)",
+  "base_value": 0.02931694084095573,
+  "n_features": 46
+}

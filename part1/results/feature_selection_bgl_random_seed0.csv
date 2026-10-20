@@ -1,0 +1,288 @@
+template_id,template,step,reason,value
+218,While inserting monitor info into DB caught java.lang.NullPointerException,correlation,correlated with template 217 (rho = 1.000; cluster of 2),1.0
+221,DeclareServiceNetworkCharacteristics has been run with the force option but the DB is not empty,correlation,correlated with template 220 (rho = 1.000; cluster of 3),1.0
+222,<*> subnets and <*> addresses to DB,correlation,correlated with template 220 (rho = 1.000; cluster of 3),1.0
+288,No power module U58 found found on link card,correlation,correlated with template 289 (rho = 0.817; cluster of 3),0.8171123923013224
+290,Link PGOOD error latched on link card,correlation,correlated with template 289 (rho = 0.817; cluster of 3),0.8171161553770976
+236,"Target=ido://FF:F2:9F:<*>:E6:<*>:<*>:0D:<*>:E9:<*>:FB/JTAG/<*> Message=JtagId All all zeros, power good may be low",correlation,correlated with template 238 (rho = 0.705; cluster of 2),0.7054954507040115
+282,ddrSize == <*>*<*>*<*> || ddrSize == <*>*<*>*<*>,correlation,correlated with template 283 (rho = 1.000; cluster of 2),1.0
+271,power module status fault detected on node card. status registers are: <*>/<*>/<*>/<*>,correlation,correlated with template 386 (rho = 0.708; cluster of 17),0.7076430776467939
+384,"com.ibm.bgldevices.BulkPowerModule with VPD of com.ibm.bgldevices.BulkPowerModule$VpdReply: IBM Part Number: 53P5763, Vendor: Cherokee International, Vendor Serial Number: <*>, Assembly Revision: ",correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+385,monitor caught java.lang.IllegalStateException: while executing CONTROL Operation caught java.io.EOFException and is stopping,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+387,While reading FanModule caught java.lang.IllegalStateException: while executing I2C Operation caught java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+388,Hardware monitor caught java.lang.IllegalStateException: while executing I2C Operation caught java.net.SocketException: Broken pipe and is stopping,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+389,While setting fan speed caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+390,While reading FanModule caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+391,While setting fan speed caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+392,While reading FanModule caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+393,While setting fan speed caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+394,While reading FanModule caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+395,While setting fan speed caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+396,While reading FanModule caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+397,While setting fan speed caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+398,While reading FanModule caught java.lang.IllegalStateException: while executing I2C Operation caught java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.lang.IllegalStateException: client not in a usable state because java.net.SocketException: Broken pipe,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+399,Hardware monitor caught java.net.SocketException: Broken pipe and is stopping,correlation,correlated with template 386 (rho = 1.000; cluster of 17),1.0
+13,idoproxydb has been started: $Name: <*> $ Input parameters: -enableflush -loguserinfo db.properties BlueGene1,correlation,correlated with template 14 (rho = 0.861; cluster of 2),0.861492159358027
+162,NodeCard VPD chip is not accessible,correlation,correlated with template 160 (rho = 1.000; cluster of 6),1.0
+163,"While initializing node card, ido with LP of FF:F2:9F:<*>:E6:<*>:<*>:0D:<*>:E9:<*>:<*> caught java.lang.NullPointerException",correlation,correlated with template 160 (rho = 1.000; cluster of 6),1.0
+164,"Node card status: ALERT <*>, ALERT <*>, ALERT <*>, ALERT <*> is (are) active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. TEMPERATURE MASK IS ACTIVE. No temperature error. Temperature Limit Error Latch is clear. PGOOD is asserted. PGOOD error latch is clear. MPGOOD is OK. MPGOOD error latch is clear. The <*> volt rail is OK. The <*> volt rail is OK.",correlation,correlated with template 160 (rho = 1.000; cluster of 6),1.0
+165,Target=ido://FF:F2:9F:<*>:E6:<*>:<*>:0D:<*>:E9:<*>:<*>/JTAG/<*> Message=Pll failed to lock,correlation,correlated with template 160 (rho = 1.000; cluster of 6),1.0
+166,<*> Message=ScomError,correlation,correlated with template 160 (rho = 0.708; cluster of 6),0.7076430776467939
+139,BglIdoChip table has <*> IDOs with the same IP address (<*>.<*>),correlation,correlated with template 140 (rho = 1.000; cluster of 2),0.9999976938412878
+274,"Error getting detailed hw info for node, caught java.io.IOException: Problems with the chip, clear all resets",correlation,correlated with template 266 (rho = 0.705; cluster of 6),0.7054954507040115
+275,"Error getting detailed hw info for node, caught java.io.IOException: Problems with the chip, could not <*> <*> <*>",correlation,correlated with template 266 (rho = 0.705; cluster of 6),0.7054954507040115
+276,Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The <*> volt rail is OK. The <*> volt rail is OK.,correlation,correlated with template 266 (rho = 0.705; cluster of 6),0.7054954507040115
+277,Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. THE <*> VOLT RAIL IS NOT OK. THE <*> VOLT RAIL IS NOT OK.,correlation,correlated with template 266 (rho = 0.705; cluster of 6),0.7054954507040115
+278,Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The <*> volt rail is OK. THE <*> VOLT RAIL IS NOT OK.,correlation,correlated with template 266 (rho = 0.705; cluster of 6),0.7054954507040115
+245,rts tree/torus link training failed: wanted: C X+ X- Y+ Y- Z+ Z- got: C <*> <*> <*> <*>,correlation,correlated with template 244 (rho = 0.708; cluster of 8),0.7081805962033313
+247,rts tree/torus link training failed: wanted: <*> C X+ X- Y+ Y- Z+ Z- got: <*> C <*> <*> <*> <*>,correlation,correlated with template 244 (rho = 0.708; cluster of 8),0.7081805962033313
+248,rts tree/torus link training failed: wanted: C X+ X- Y+ Y- Z+ Z- got: C <*> <*> <*> <*> <*>,correlation,correlated with template 244 (rho = 0.708; cluster of 8),0.7081805962033313
+249,rts tree/torus link training failed: wanted: A B C X+ X- Y+ Y- Z+ Z- got: <*> <*> <*> <*> <*> <*> <*>,correlation,correlated with template 244 (rho = 0.708; cluster of 8),0.7081805962033313
+250,rts tree/torus link training failed: wanted: A B C X+ X- Y+ Y- Z+ Z- got: <*> <*> <*> <*> <*> <*>,correlation,correlated with template 244 (rho = 0.708; cluster of 8),0.7081805962033313
+251,rts tree/torus link training failed: wanted: C X+ X- Y+ Y- Z+ Z- got: C X+ Y- Z-,correlation,correlated with template 244 (rho = 0.708; cluster of 8),0.7081805962033313
+252,rts tree/torus link training failed: wanted: <*> C X+ X- Y+ Y- Z+ Z- got: <*> C <*> <*> <*>,correlation,correlated with template 244 (rho = 0.708; cluster of 8),0.7081805962033313
+241,idoproxydb hit ASSERT condition: ASSERT expression=!(nMsgLen > <*>) Source file=idomarshalerio.cpp Source line=<*> Function=int IdoMarshalerRecvBuffer::ReadBlock(IdoMsg::IdoMsgHdr*&),correlation,correlated with template 231 (rho = 0.705; cluster of 3),0.7054954507040115
+242,idoproxydb hit ASSERT condition: ASSERT expression=!(RecvMsgHdr.ulLen > <*>) Source file=idomarshalerio.cpp Source line=<*> Function=virtual int IdoMarshalerIo::RunRecv(),correlation,correlated with template 231 (rho = 0.705; cluster of 3),0.7054954507040115
+158,"While initializing node card, ido with LP of <*> caught java.lang.IllegalStateException: while executing <*> Operation caught java.lang.RuntimeException: Communication error: (DirectIDo for com.ibm.ido.DirectIDo object <*> with image version <*> and card type <*>] is in state = COMMUNICATION_ERROR, sequenceNumberIsOk = false, ExpectedSequenceNumber = <*>, Reply Sequence Number = -<*>, timedOut = true, retries = <*>, timeout = <*>, Expected Op Command = <*>, Actual Op Reply = -<*>, Expected Sync Command = <*>, Actual Sync Reply = -<*>)",correlation,correlated with template 157 (rho = 0.866; cluster of 2),0.866234351576789
+143,"While initializing node card, ido with LP of <*> caught java.lang.IllegalStateException: IDo is not in functional state -- currently in state COMMUNICATION_ERROR",correlation,correlated with template 142 (rho = 0.866; cluster of 2),0.8658061293124266
+186,"Problem reading the ethernet arl entries fro the service card: java.lang.IllegalStateException: while executing I2C Operation caught java.lang.RuntimeException: Communication error: (DirectIDo for com.ibm.ido.DirectIDo object <*> with image version <*> and card type <*>] is in state = COMMUNICATION_ERROR, sequenceNumberIsOk = false, ExpectedSequenceNumber = <*>, Reply Sequence Number = <*> timedOut = true, retries = <*>, timeout = <*>, Expected Op Command = <*>, Actual Op Reply = <*> Expected Sync Command = <*>, Actual Sync Reply = <*>",correlation,correlated with template 232 (rho = 0.708; cluster of 4),0.7076430776467939
+239,"Problem communicating with service card, ido chip: <*>:<*>:<*>:<*>:<*>:<*>. java.lang.IllegalStateException: while executing CONTROL Operation caught java.lang.RuntimeException: Communication error: (DirectIDo for com.ibm.ido.DirectIDo object <*> with image version <*> and card type <*>] is in state = COMMUNICATION_ERROR, sequenceNumberIsOk = false, ExpectedSequenceNumber = <*>, Reply Sequence Number = <*> timedOut = true, retries = <*>, timeout = <*>, Expected Op Command = <*>, Actual Op Reply = <*> Expected Sync Command = <*>, Actual Sync Reply = <*>",correlation,correlated with template 232 (rho = 1.000; cluster of 4),1.0
+240,Missing reverse cable: Cable <*> <*> E (J13) --> <*> <*> D (J15) is present BUT the reverse cable <*> <*> E (J05) --> <*> <*> D (J07) is missing,correlation,correlated with template 232 (rho = 1.000; cluster of 4),1.0
+228,"Node card status: ALERT <*>, ALERT <*>, ALERT <*>, ALERT <*> is (are) active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD is asserted. PGOOD error latch is clear. MPGOOD is OK. MPGOOD error latch is clear. The <*> volt rail is OK. The <*> volt rail is OK.",correlation,correlated with template 227 (rho = 1.000; cluster of 3),1.0
+229,idoproxy exited normally with exit code <*>,correlation,correlated with template 227 (rho = 1.000; cluster of 3),1.0
+178,NodeCard is not fully functional,correlation,correlated with template 161 (rho = 0.820; cluster of 2),0.8199671790572133
+223,"Problem communicating with service card, ido chip: <*>:<*>:<*>:<*>:<*>:<*>. java.lang.IllegalStateException: IDo is not in functional state -- currently in state COMMUNICATION_ERROR",correlation,correlated with template 224 (rho = 0.754; cluster of 2),0.7536132562619776
+225,"Expected <*> active FanModules, but found <*> ( Found J300 J301 J302 J303 J304 <*> <*> <*> <*> ).",correlation,correlated with template 219 (rho = 0.709; cluster of 2),0.7090580644167075
+214,MailboxMonitor::serviceMailboxes() lib_ido_error: -<*> BGLERR_IDO_PKT_TIMEOUT connection lost to node/link/service card,correlation,correlated with template 213 (rho = 0.809; cluster of 2),0.8092309892863003
+382,EndServiceAction is restarting the <*> cards in Midplane <*> as part of Service Action <*>,correlation,correlated with template 378 (rho = 1.000; cluster of 2),0.9999893292019882
+121,Controlling BG/L rows [ <*> ],correlation,correlated with template 120 (rho = 1.000; cluster of 3),1.0
+122,Running as background command,correlation,correlated with template 120 (rho = 1.000; cluster of 3),1.0
+150,"PrepareForService is being done on this part <*> mCardSernum(<*>), <*> mIp(<*>.<*>), mType(<*>)) by <*>",correlation,correlated with template 110 (rho = 0.881; cluster of 2),0.880906219731569
+111,EndServiceAction is restarting the <*> in midplane <*> as part of Service Action <*>,correlation,correlated with template 116 (rho = 0.799; cluster of 6),0.7988774696576656
+112,EndServiceAction <*> performed upon <*> by <*>,correlation,correlated with template 116 (rho = 0.909; cluster of 6),0.9094388785902839
+113,Node card is not fully functional,correlation,correlated with template 116 (rho = 0.977; cluster of 6),0.9774974677737046
+114,Can not get assembly information for node card,correlation,correlated with template 116 (rho = 0.977; cluster of 6),0.9773438662236102
+115,Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> OK. MPGOOD ERROR LATCH IS ACTIVE. The <*> volt rail is OK. The <*> volt rail is OK.,correlation,correlated with template 116 (rho = 0.977; cluster of 6),0.9773409365808824
+179,LinkCard is not fully functional,correlation,correlated with template 177 (rho = 0.839; cluster of 3),0.8385637069765415
+180,this link card is not fully functional,correlation,correlated with template 177 (rho = 0.708; cluster of 3),0.7076187446441763
+149,"error threshold, consider replacing the card",correlation,correlated with template 148 (rho = 1.000; cluster of 2),1.0
+147,"rror threshold, consider replacing the card",correlation,correlated with template 146 (rho = 1.000; cluster of 2),1.0
+273,program,correlation,correlated with template 272 (rho = 1.000; cluster of 2),1.0
+124,exception syndrome register: <*>,correlation,correlated with template 126 (rho = 0.836; cluster of 10),0.8361915392186484
+125,machine check: i-fetch......................<*>,correlation,correlated with template 126 (rho = 0.941; cluster of 10),0.9405106893277392
+127,floating point operation....................<*>,correlation,correlated with template 126 (rho = 1.000; cluster of 10),0.999999852974895
+128,store operation.............................<*>,correlation,correlated with template 126 (rho = 1.000; cluster of 10),0.999999852974895
+129,data store interrupt caused by <*>,correlation,correlated with template 126 (rho = 1.000; cluster of 10),0.9999902962966989
+130,auxiliary processor.........................<*>,correlation,correlated with template 126 (rho = 1.000; cluster of 10),0.9999902962966989
+131,byte ordering exception.....................<*>,correlation,correlated with template 126 (rho = 0.966; cluster of 10),0.9663774815420234
+132,program interrupt: fp cr update.............<*>,correlation,correlated with template 126 (rho = 0.966; cluster of 10),0.9663774815420234
+133,program interrupt: fp cr field .............<*>,correlation,correlated with template 126 (rho = 0.966; cluster of 10),0.9663774815420234
+418,"dear <*> (<*> RAS KERNEL INFO Kernel detected <*> integer alignment exceptions (<*>) iar <*>, dear <*> (<*>) iar <*>, dear <*> (<*>) iar <*>, dear <*> (<*>) iar <*>, dear <*> (<*>) iar <*>, dear <*> (<*>) iar <*>, dear <*> (<*>) iar <*>, dear <*> (<*>) iar <*>, dear <*>",correlation,correlated with template 417 (rho = 0.708; cluster of 2),0.707643077646794
+411,"<*> total interrupts. <*> critical input interrupts. <*> microseconds total spent on critical input interrupts, <*> microseconds max time in a critical input interrupt.",correlation,correlated with template 410 (rho = 1.000; cluster of 2),1.0
+300,Machine Check Status Register: <*>,correlation,correlated with template 325 (rho = 0.946; cluster of 77),0.946246656260155
+301,Machine State Register: <*>,correlation,correlated with template 325 (rho = 0.984; cluster of 77),0.9836378077043201
+302,Core Configuration Register <*>: <*>,correlation,correlated with template 325 (rho = 0.984; cluster of 77),0.9836378077043201
+304,General Purpose Registers:,correlation,correlated with template 325 (rho = 0.984; cluster of 77),0.9836378077043201
+305,r00=<*> r01=<*> r02=<*> r03=<*>,correlation,correlated with template 325 (rho = 0.984; cluster of 77),0.9836378077043201
+306,r04=<*> r05=<*> r06=<*> r07=<*>,correlation,correlated with template 325 (rho = 0.984; cluster of 77),0.9836378077043201
+307,r08=<*> r09=<*> r10=<*> r11=<*>,correlation,correlated with template 325 (rho = 0.984; cluster of 77),0.9836378077043201
+308,r12=<*> r13=<*> r14=<*> r15=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+309,r16=<*> r17=<*> r18=<*> r19=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+310,r20=<*> r21=<*> r22=<*> r23=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+311,r24=<*> r25=<*> r26=<*> r27=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+312,r28=<*> r29=<*> r30=<*> r31=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+313,Special Purpose Registers:,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+314,lr=<*> cr=<*> xer=<*> ctr=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+315,msr=<*> dear=<*> esr=<*> fpscr=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+316,dbcr0=<*> dbsr=<*> ccr0=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+317,Floating Point Status and Control Register: <*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+318,exception summary........................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+319,enabled exception summary................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+320,invalid operation exception <*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+321,overflow exception.......................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+322,underflow exception......................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+323,divide-by-zero exception.................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+324,inexact exception........................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+326,fraction <*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+327,quiet NaN................................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+328,minus <*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+329,minus normalized number..................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+330,minus denormalized number................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+331,plus <*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+332,plus denormalized number.................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+333,plus normalized number...................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+334,reserved.................................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+335,invalid operation exception (int cnvt)...<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+336,enable invalid operation exceptions......<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+337,enable overflow exceptions...............<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+338,enable underflow exceptions..............<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+339,enable divide-by-zero exceptions.........<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+340,enable inexact exceptions................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+341,enable non-IEEE mode.....................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+342,round nearest............................<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+343,round toward <*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+344,Floating Point Registers:,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+345,fpr0=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+346,fpr1=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+347,fpr2=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+348,fpr3=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+349,fpr4=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+350,fpr5=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+351,fpr6=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+352,fpr7=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+353,fpr8=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+354,fpr9=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+355,fpr10=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+356,fpr11=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+357,fpr12=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+358,fpr13=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+359,fpr14=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+360,fpr15=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+361,fpr16=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+362,fpr17=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+363,fpr18=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+364,fpr19=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+365,fpr20=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+366,fpr21=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+367,fpr22=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+368,fpr23=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+369,fpr24=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+370,fpr25=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+371,fpr26=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+372,fpr27=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+373,fpr28=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+374,fpr29=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+375,fpr30=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+376,fpr31=<*>,correlation,correlated with template 325 (rho = 1.000; cluster of 77),1.0
+407,machine check interrupt (bit=<*>): L2 dcache unit <*> <*> parity error,correlation,correlated with template 325 (rho = 0.717; cluster of 77),0.7171589060787698
+62,L3 <*> control register: <*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+63,start <*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+64,disable speculative access...............<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+65,close EDRAM pages as soon as possible....<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+66,size of scratchpad portion of L3.........<*> (0M),correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+67,disable all access to cache directory....<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+68,write buffer commit threshold............<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+69,size of DDR we are caching...............<*> (512M),correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+70,prefetch depth for <*> <*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+71,max number of outstanding prefetches.....<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+72,turn on hidden refreshes.................<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+73,disable write lines <*>:<*>..................<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8096802211080898
+74,capture first <*> <*> error address..<*>,correlation,correlated with template 108 (rho = 0.810; cluster of 47),0.8103639334835556
+75,disable flagging of DDR UE's as major internal error.<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+76,L3 ecc status register: <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+77,correctable error detected in directory <*>......<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+78,uncorrectable error detected in <*> <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+79,correctable error detected in EDRAM bank <*>.....<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+80,uncorrectable error detected in EDRAM bank <*>...<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+81,parity error in <*> <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+82,parity error in read queue <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+83,number of correctable errors detected in L3 <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+84,interrupt threshold...<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+85,number of lines with parity errors written to L3 EDRAMs...<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+86,DDR machine check register: <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+87,memory and bus summary...........................<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+88,command manager unit summary.....................<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+89,memory manager <*> <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+90,memory manager address parity error..............<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+91,memory manager <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+92,memory manager <*> buffer <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+93,memory manager refresh counter timeout...........<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+94,state machine....................................<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+95,memory manager / command manager address parity..<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+96,regctl scancom interface.........................<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+97,DDR failing <*> register: <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284384208601491
+98,capture valid.........<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+99,symbol................<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+100,mask..................<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+101,miscompare............<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+102,uncorrectable error...<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+103,address parity error..<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+104,correctable error.....<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+105,qw trapped............<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+106,chip select...........<*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+107,DDR failing data registers: <*>,correlation,correlated with template 108 (rho = 0.828; cluster of 47),0.8284988060450295
+20,machine check <*>,correlation,correlated with template 19 (rho = 0.908; cluster of 32),0.9077986790583693
+21,machine check status register: <*>,correlation,correlated with template 19 (rho = 0.817; cluster of 32),0.8170222502451056
+22,summary...........................<*>,correlation,correlated with template 19 (rho = 0.817; cluster of 32),0.8170198723975233
+23,instruction plb error.............<*>,correlation,correlated with template 19 (rho = 0.861; cluster of 32),0.8612581404441405
+24,data <*> plb <*>,correlation,correlated with template 19 (rho = 0.858; cluster of 32),0.858152302528135
+25,tlb error.........................<*>,correlation,correlated with template 19 (rho = 0.858; cluster of 32),0.858152302528135
+26,i-cache parity error..............<*>,correlation,correlated with template 19 (rho = 0.858; cluster of 32),0.858152302528135
+27,d-cache <*> parity <*>,correlation,correlated with template 19 (rho = 0.855; cluster of 32),0.8550467686801949
+28,imprecise machine check...........<*>,correlation,correlated with template 19 (rho = 0.851; cluster of 32),0.8508372900662333
+29,machine state register: <*>,correlation,correlated with template 19 (rho = 0.856; cluster of 32),0.8562754661308329
+30,wait state enable.................<*>,correlation,correlated with template 19 (rho = 0.893; cluster of 32),0.8931195203065302
+31,critical input interrupt enable...<*>,correlation,correlated with template 19 (rho = 0.881; cluster of 32),0.8807655917240615
+32,external input interrupt enable...<*>,correlation,correlated with template 19 (rho = 0.880; cluster of 32),0.8803144887065938
+33,"problem state (<*>=sup,<*>=usr).......<*>",correlation,correlated with template 19 (rho = 0.870; cluster of 32),0.8702408617207138
+34,floating point <*> <*>,correlation,correlated with template 19 (rho = 0.865; cluster of 32),0.8652491489641801
+35,floating pt ex mode <*> enable......<*>,correlation,correlated with template 19 (rho = 0.849; cluster of 32),0.8486494035968064
+36,debug wait enable.................<*>,correlation,correlated with template 19 (rho = 0.831; cluster of 32),0.831129141847108
+37,debug interrupt enable............<*>,correlation,correlated with template 19 (rho = 0.823; cluster of 32),0.8231528407772977
+38,instruction address space.........<*>,correlation,correlated with template 19 (rho = 0.782; cluster of 32),0.7823635102763404
+39,data address space................<*>,correlation,correlated with template 19 (rho = 0.771; cluster of 32),0.7713162168758172
+40,core configuration register: <*>,correlation,correlated with template 19 (rho = 0.706; cluster of 32),0.7056764414567697
+41,disable store gathering..................<*>,correlation,correlated with template 19 (rho = 0.757; cluster of 32),0.7566811734879662
+42,disable apu instruction broadcast........<*>,correlation,correlated with template 19 (rho = 0.747; cluster of 32),0.7472583760287108
+43,disable trace broadcast..................<*>,correlation,correlated with template 19 (rho = 0.741; cluster of 32),0.7407460992078299
+44,guaranteed <*> cache block <*>,correlation,correlated with template 19 (rho = 0.737; cluster of 32),0.7373424164634705
+45,force load/store alignment...............<*>,correlation,correlated with template 19 (rho = 0.734; cluster of 32),0.7342305660460663
+46,icache prefetch <*>,correlation,correlated with template 19 (rho = 0.734; cluster of 32),0.7338982602015256
+47,general purpose registers:,correlation,correlated with template 19 (rho = 0.665; cluster of 32),0.6649884481281688
+48,<*>:<*>:<*>:<*>:<*>,correlation,correlated with template 19 (rho = 0.665; cluster of 32),0.6649884481281688
+49,special purpose registers:,correlation,correlated with template 19 (rho = 0.662; cluster of 32),0.6618008970732756
+50,lr:<*> cr:<*> xer:<*> ctr:<*>,correlation,correlated with template 19 (rho = 0.662; cluster of 32),0.6618008970732756
+383,Target=ido://FF:F2:9F:<*>:D5:<*>:<*>:0D:<*>:E9:2A:FE/JTAG/<*> Message=Invalid JtagId = <*> Run environmental monitor to diagnose possible hardware failure.,correlation,correlated with template 379 (rho = 0.708; cluster of 2),0.707643077646794
+294,<*> tree receiver <*> in re-synch state event(s) (dcr <*>) detected over <*> seconds,correlation,correlated with template 296 (rho = 0.972; cluster of 5),0.9717833412379585
+295,<*> torus receiver <*> input pipe error(s) (dcr <*>) detected and corrected over <*> seconds,correlation,correlated with template 296 (rho = 0.955; cluster of 5),0.9553917333746537
+297,total of <*> ddr error(s) detected and corrected over <*> seconds,correlation,correlated with template 296 (rho = 1.000; cluster of 5),0.9999996472548826
+298,<*> <*> <*> error(s) (dcr <*>) detected and corrected over <*> seconds,correlation,correlated with template 296 (rho = 0.937; cluster of 5),0.937017679071106
+152,critical input interrupt (unit=<*> bit=<*>): warning for <*> <*> wire,correlation,correlated with template 136 (rho = 0.969; cluster of 2),0.9692019201321795
+4,"<*> ddr errors(s) detected and corrected on rank <*>, symbol <*>, bit <*>",correlation,correlated with template 6 (rho = 0.820; cluster of 6),0.8195326447444106
+5,<*> <*> <*> error(s) (dcr <*>) detected and corrected,correlation,correlated with template 6 (rho = 0.682; cluster of 6),0.6821689252740406
+7,total of <*> ddr error(s) detected and corrected,correlation,correlated with template 6 (rho = 0.811; cluster of 6),0.8112964669867444
+12,<*> tree receiver <*> in re-synch state event(s) (dcr <*>) detected,correlation,correlated with template 6 (rho = 0.627; cluster of 6),0.6265416634520805
+52,<*> torus receiver <*> input pipe error(s) (dcr <*>) detected and corrected,correlation,correlated with template 6 (rho = 0.636; cluster of 6),0.6359378870235928
+404,mmcs_db_server has been started: ./mmcs_db_server --useDatabase BGL --dbproperties db.properties --iolog /bgl/BlueLight/logs/BGL --reconnect-blocks all --shutdown-timeout <*> --shutdown-timeout <*>,correlation,correlated with template 292 (rho = 0.704; cluster of 2),0.7038382795052832
+260,rts: bad message header: index <*> greater than total <*> (softheader=<*>) PSR0=<*> PSR1=<*> PRXF=<*> PIXF=<*>,correlation,correlated with template 258 (rho = 1.000; cluster of 2),0.9999965249745042
+259,rts: bad message header: <*> <*> <*> <*> <*> <*> <*> (softheader=<*>) PSR0=<*> PSR1=<*> PRXF=<*> PIXF=<*>,correlation,correlated with template 257 (rho = 0.753; cluster of 2),0.7529564789841217
+55,ciod: Message code <*> is not <*> or <*>,correlation,correlated with template 58 (rho = 0.895; cluster of 2),0.8951045183584421
+182,"rts: kernel terminated for reason <*> bad message header: <*> <*> <*> type=<*>, cpu=<*>, index=<*>, <*>",correlation,correlated with template 193 (rho = 0.955; cluster of 4),0.9551810792247084
+196,max=<*>,correlation,correlated with template 193 (rho = 0.954; cluster of 4),0.9541572128346473
+201,"<*>, max=<*>",correlation,correlated with template 193 (rho = 0.851; cluster of 4),0.8511341759931769
+198,ciod: duplicate canonical-rank <*> to logical-rank <*> mapping at line <*> of node map file /p/gb2/pakin1/sweep3d-5x5x400-10mk-3mmi-1024pes-sweep/sweep.map,correlation,correlated with template 199 (rho = 0.708; cluster of 2),0.707643077646794
+200,ciod: Error creating node map from file <*> <*> <*>,correlation,correlated with template 155 (rho = 0.706; cluster of 2),0.7061238041565154
+202,external input interrupt (unit=<*> bit=<*>): uncorrectable torus error,correlation,correlated with template 204 (rho = 1.000; cluster of 3),1.0
+203,Torus non-recoverable error DCRs follow.,correlation,correlated with template 204 (rho = 1.000; cluster of 3),1.0
+212,ciodb exited normally with exit code <*>,correlation,correlated with template 211 (rho = 0.707; cluster of 2),0.7065700776699885
+123,data storage interrupt,VIF,VIF = 12216537.33,12216537.326536845
+192,New ido chip inserted into the database: <*> ip=<*>.<*> v=<*> t=<*>,VIF,VIF = 290932.78,290932.78472634545
+235,idoproxydb hit ASSERT condition: ASSERT <*> Source <*> Source line=<*> Function=int <*> <*>,VIF,VIF = 42993.97,42993.966493361084
+51,rts panic! - stopping execution,VIF,VIF = 41762.58,41762.584868677746
+231,Bad cable going into LinkCard (<*>) Jtag (<*>) Port <*> - <*> bad wires,VIF,VIF = 14790.45,14790.454069855361
+141,"While initializing <*> card iDo machine with LP of <*> caught java.io.IOException: Could not contact iDo with <*> and IP=/<*>.<*> because java.lang.RuntimeException: Communication error: (DirectIDo for Uninitialized DirectIDo for <*> is in state = COMMUNICATION_ERROR, sequenceNumberIsOk = false, ExpectedSequenceNumber = <*>, Reply Sequence Number = -<*>, timedOut = true, retries = <*>, timeout = <*>, Expected Op Command = <*>, Actual Op Reply = -<*>, Expected Sync Command = <*>, Actual Sync Reply = -<*>)",VIF,VIF = 5522.75,5522.752603381342
+173,ciod: Error opening node map file <*> No such file or directory,VIF,VIF = 2325.45,2325.452736776844
+53,data address: <*>,VIF,VIF = 1957.23,1957.2279746429604
+237,Microloader Assertion,VIF,VIF = 746.25,746.2518075680875
+244,rts tree/torus link training failed: wanted: <*> C X+ X- Y+ Y- Z+ Z- got: <*> C <*> <*> <*> <*> <*>,VIF,VIF = 512.20,512.201127521681
+116,"Node card VPD check: <*> node in processor card slot <*> do not match. VPD ecid <*>, found <*>",VIF,VIF = 432.43,432.42774837407956
+379,Power Good signal deactivated: <*> A service action may be required.,VIF,VIF = 188.84,188.8393778953965
+126,program interrupt: <*> <*>,VIF,VIF = 117.36,117.36112564566983
+174,shutdown complete,VIF,VIF = 104.77,104.76748150421002
+224,"While initializing service card iDo with LP of <*> caught java.io.IOException: Could not contact iDo with <*> and IP=/<*>.<*> because java.lang.RuntimeException: Communication error: (DirectIDo for Uninitialized DirectIDo for <*> is in state = COMMUNICATION_ERROR, sequenceNumberIsOk = false, ExpectedSequenceNumber = <*>, Reply Sequence Number = -<*>, timedOut = true, retries = <*>, timeout = <*>, Expected Op Command = <*>, Actual Op Reply = -<*>, Expected Sync Command = <*>, Actual Sync Reply = -<*>)",VIF,VIF = 91.05,91.05354434191837
+108,<*>,VIF,VIF = 77.68,77.67530193891781
+194,"rts: kernel terminated for reason 1002rts: bad message header: too many packets, type=<*>, cpu=<*>, index=<*>, total=<*>, <*>",VIF,VIF = 36.89,36.89181391608339
+14,ciodb has been restarted.,VIF,VIF = 32.17,32.16829171756025
+110,"PrepareForService shutting down <*> mCardSernum(<*>), <*> mIp(<*>.<*>), mType(<*>)) as part of Service Action <*>",VIF,VIF = 31.11,31.107684142859682
+142,NodeCard VPD is corrupt,VIF,VIF = 28.40,28.404443487862636
+145,ciod: Error creating node map from file <*> <*> <*> <*>,VIF,VIF = 17.82,17.819471286207474
+238,VALIDATE_LOAD_IMAGE_CRC_IN_DRAM,VIF,VIF = 14.80,14.800860986346025
+219,"Node card VPD check: missing <*> node, VPD ecid <*> in processor card slot <*>",VIF,VIF = 12.07,12.070453395387151
+148,"ddr: Unable to steer rank=<*>, symbol=<*> - rank is already steering symbol <*>. Due to multiple symbols being over the <*>",VIF,VIF = 12.00,11.995570436443119
+415,ddr: Suppressing further CE interrupts,VIF,VIF = 10.25,10.249234714488379
+227,Found invalid node ecid in processor card slot <*> ecid <*>,VIF,VIF = 9.18,9.1756900386826
+193,"rts: kernel terminated for reason 1001rts: bad message header: invalid cpu, type=<*>, cpu=<*>, index=<*>, total=<*>",VIF,VIF = 7.19,7.188858413000293
+264,iar <*> dear <*>,VIF,VIF = 6.96,6.959261800144585
+291,Local PGOOD error latched on link card,VIF,VIF = 6.53,6.534994482170098
+169,mmcs_server exited normally with exit code <*>,VIF,VIF = 6.15,6.152720383401108
+146,"ddr: Unable to steer rank=<*>, symbol=<*> - rank is already steering symbol <*>. Due to multiple symbols being over the correctable e",VIF,VIF = 5.85,5.850457928729601

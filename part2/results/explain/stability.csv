@@ -1,0 +1,32 @@
+group,mean_importance,std_importance,median_rank,best_rank,worst_rank,n_top5,share_top5,members,representative_template
+G33,0.13758206252303282,0.004305116706202769,1.0,1.0,2.0,10,1.0,33,Unexpected error trying to delete block <*>. BlockInfo not found in volumeMap.
+G1,0.11219522321773163,0.017445655023014664,3.0,2.0,3.0,10,1.0,1 5,Receiving block <*> src: <*> dest: <*>
+G3,0.10736874181782222,0.016557644485990536,2.0,1.0,3.0,10,1.0,3 4 16,PacketResponder <*> for block <*> <*>
+G6,0.0521004471983032,0.005198751314953223,4.0,4.0,5.0,10,1.0,6 7 9 12,Received block <*> src: <*> dest: <*> of size <*>
+G17,0.03503479100458458,0.012004464839988018,5.5,4.0,7.0,5,0.5,17 32,Deleting block <*> file <*>
+G21,0.029005251880261106,0.0013855925922202003,5.5,5.0,6.0,5,0.5,21,BLOCK* NameSystem.addStoredBlock: Redundant addStoredBlock request received for <*> on <*> size <*>
+G34,0.019444318683197133,0.005242684523173891,7.0,6.0,8.0,0,0.0,34,BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for <*> on <*> size <*> But it does not belong to any file.
+G18,0.014188948315538302,0.0007369284544100071,8.0,7.0,8.0,0,0.0,18,Receiving empty packet for block <*>
+G10,0.0057577701739645465,0.0008204129103806346,9.0,9.0,9.0,0,0.0,10 35,<*> Served block <*> to <*>
+G13,0.0009837052363791557,0.0002614514583925278,10.0,10.0,10.0,0,0.0,13,Verification succeeded for <*>
+G14,0.00040883515714200256,0.0002128836242950846,11.0,11.0,13.0,0,0.0,14 19 20 24,writeBlock <*> received exception <*>
+G41,0.0001952326938054001,0.00011658238752160693,12.0,11.0,16.0,0,0.0,41,PendingReplicationMonitor timed out block <*>
+G8,0.00017490403870648586,0.00013520082987121762,13.0,11.0,16.0,0,0.0,8,"<*> Starting thread to transfer block <*> to <*>, <*>"
+G30,8.49697743930612e-05,5.2094532278646526e-05,14.5,13.0,15.0,0,0.0,30 31,"writeBlock <*> received exception <*>: Block <*> is valid, and cannot be written to."
+G25,6.499250102888531e-05,3.468453911894599e-05,14.5,12.0,22.0,0,0.0,25 26,Changing block file offset of block <*> from <*> to <*> meta file offset to <*>
+G38,2.2790380991287113e-05,2.6317167242400652e-05,17.0,13.0,24.0,0,0.0,38,writeBlock <*> received exception <*>: <*> millis timeout while waiting for channel to be ready for <*> ch : <*>[connected local=<*> remote=<*>]
+G22,1.8331136900291245e-05,1.626592367939976e-05,18.0,15.0,23.0,0,0.0,22,PacketResponder <*> Exception <*>: <*> millis timeout while waiting for channel to be ready for read. ch : <*>[connected local=<*> remote=<*>]
+G15,1.693207862907665e-05,3.8810895139122306e-05,22.5,14.0,25.0,0,0.0,15,PacketResponder <*> Exception <*>
+G45,1.0732022189140025e-05,1.5569822989643014e-05,21.0,16.0,23.0,0,0.0,45,Adding an already existing block <*>
+G2,7.728070178214205e-06,4.201866845803619e-06,18.0,17.0,21.0,0,0.0,2 11,BLOCK* NameSystem.allocateBlock: <*>
+G23,7.48359887700794e-06,1.0754400143871548e-05,20.5,16.0,24.0,0,0.0,23,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+G29,4.664324175728442e-06,3.4271951101328696e-06,19.5,17.0,25.0,0,0.0,29,PacketResponder <*> Exception <*>: Broken pipe
+G40,4.183580363169234e-06,4.3688922807265465e-06,19.5,18.0,24.0,0,0.0,40,BLOCK* Removing block <*> from neededReplications as it does not belong to any file.
+G27,1.829468247410243e-06,4.3325590663148305e-06,21.5,19.0,26.0,0,0.0,27 28,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.
+G37,6.495137706294813e-07,2.0539428868333376e-06,23.0,21.0,25.0,0,0.0,37,Exception in receiveBlock for block <*>: <*> millis timeout while waiting for channel to be ready for write. ch : <*>[connected local=<*> remote=<*>]
+G36,3.1297747629112463e-07,6.976304234726698e-07,23.0,21.0,25.0,0,0.0,36,PacketResponder <*> Exception <*>: Connection reset by peer
+G39,1.4063572572256264e-07,1.6381741671594252e-07,23.0,20.0,27.0,0,0.0,39,Reopen Block <*>
+G44,0.0,0.0,24.0,21.0,27.0,0,0.0,44,writeBlock <*> received exception <*>: No route to host
+G42,0.0,0.0,23.5,21.0,27.0,0,0.0,42 43,writeBlock <*> received exception <*>: <*> <*>
+G47,0.0,0.0,23.5,21.0,27.0,0,0.0,,
+G46,0.0,0.0,23.0,21.0,27.0,0,0.0,46,Exception in receiveBlock for block <*>: Broken pipe

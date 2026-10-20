@@ -1,0 +1,19 @@
+template_id,template,step,reason,value
+31,<*>:Failed to transfer <*> to <*> got <*>: Connection reset by peer,correlation,correlated with template 30 (rho = 1.000; cluster of 2),0.9999999999999999
+11,BLOCK* NameSystem.allocateBlock: <*>. <*>,correlation,correlated with template 2 (rho = -1.000; cluster of 2),-0.9999999999999999
+37,Exception in receiveBlock for block <*>: <*> millis timeout while waiting for channel to be ready for write. ch : <*>[connected local=<*> remote=<*>],correlation,correlated with template 39 (rho = 0.707; cluster of 2),0.7071041462694883
+22,PacketResponder <*> Exception <*>: <*> millis timeout while waiting for channel to be ready for read. ch : <*>[connected local=<*> remote=<*>],correlation,correlated with template 25 (rho = 0.882; cluster of 3),0.8819127215649162
+26,<*>:Exception writing block <*> to mirror <*>,correlation,correlated with template 25 (rho = 0.850; cluster of 3),0.8498239989512969
+28,writeBlock <*> received exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,correlation,correlated with template 27 (rho = 0.913; cluster of 2),0.9128697952776524
+23,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,correlation,correlated with template 24 (rho = 0.728; cluster of 2),0.7276024565333786
+14,writeBlock <*> received exception <*>,correlation,correlated with template 19 (rho = 0.761; cluster of 3),0.7606868401308257
+20,writeBlock <*> received exception <*>: Connection reset by peer,correlation,correlated with template 19 (rho = 1.000; cluster of 3),0.9999999999999999
+35,<*>:Got exception while serving <*> to <*>:,correlation,correlated with template 10 (rho = 0.938; cluster of 2),0.9381247619772205
+7,<*>:Transmitted block <*> to <*>,correlation,correlated with template 6 (rho = 1.000; cluster of 4),0.9999995815425028
+9,BLOCK* ask <*> to replicate <*> to datanode(s) <*>,correlation,correlated with template 6 (rho = 0.997; cluster of 4),0.9974362588264821
+12,<*> Starting thread to transfer block <*> to <*>,correlation,correlated with template 6 (rho = 0.989; cluster of 4),0.9892453097921087
+32,BLOCK* NameSystem.delete: <*> is <*> to invalidSet of <*>,correlation,correlated with template 17 (rho = 0.975; cluster of 2),0.9747141168130381
+3,PacketResponder <*> for block <*> <*>,correlation,correlated with template 1 (rho = 0.752; cluster of 4),0.7520530581684883
+4,Received block <*> of size <*> from <*>,correlation,correlated with template 1 (rho = 0.746; cluster of 4),0.7455713086011481
+5,BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is <*> to <*> size <*>,correlation,correlated with template 1 (rho = 0.929; cluster of 4),0.9288053533958531
+25,Changing block file offset of block <*> from <*> to <*> meta file offset to <*>,VIF,VIF = 9.15,9.149325318735949

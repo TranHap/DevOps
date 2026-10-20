@@ -1,0 +1,19 @@
+template_id,template,step,reason,value
+11,BLOCK* NameSystem.allocateBlock: <*>. <*>,correlation,correlated with template 2 (rho = -1.000; cluster of 2),-1.0
+7,<*>:Transmitted block <*> to <*>,correlation,correlated with template 6 (rho = 1.000; cluster of 4),0.9999994913039637
+9,BLOCK* ask <*> to replicate <*> to datanode(s) <*>,correlation,correlated with template 6 (rho = 0.997; cluster of 4),0.9974278816615101
+12,<*> Starting thread to transfer block <*> to <*>,correlation,correlated with template 6 (rho = 0.989; cluster of 4),0.98894464876557
+3,PacketResponder <*> for block <*> <*>,correlation,correlated with template 1 (rho = 0.740; cluster of 4),0.7395293372799939
+4,Received block <*> of size <*> from <*>,correlation,correlated with template 1 (rho = 0.730; cluster of 4),0.7299774856184412
+5,BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is <*> to <*> size <*>,correlation,correlated with template 1 (rho = 0.948; cluster of 4),0.9475984564057287
+32,BLOCK* NameSystem.delete: <*> is <*> to invalidSet of <*>,correlation,correlated with template 17 (rho = 0.988; cluster of 2),0.9883137539450868
+35,<*>:Got exception while serving <*> to <*>:,correlation,correlated with template 10 (rho = 0.953; cluster of 2),0.9525198515531759
+20,writeBlock <*> received exception <*>: Connection reset by peer,correlation,correlated with template 19 (rho = 1.000; cluster of 2),0.9999999999999999
+23,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,correlation,correlated with template 14 (rho = 0.698; cluster of 3),0.6984531145905559
+24,Exception in receiveBlock for block <*>,correlation,correlated with template 14 (rho = 0.839; cluster of 3),0.8388489139246452
+26,<*>:Exception writing block <*> to mirror <*>,correlation,correlated with template 25 (rho = 0.713; cluster of 3),0.7134567385793681
+27,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,correlation,correlated with template 25 (rho = 0.707; cluster of 3),0.7070883358016021
+30,"writeBlock <*> received exception <*>: Block <*> is valid, and cannot be written to.",correlation,correlated with template 31 (rho = 0.913; cluster of 2),0.9128697952776524
+19,Exception in receiveBlock for block <*>: Connection reset by peer,VIF,VIF = 7.55,7.5507411847101755
+42,writeBlock <*> received exception <*>: <*> <*>,VIF,VIF = 7.11,7.106532986578927
+25,Changing block file offset of block <*> from <*> to <*> meta file offset to <*>,VIF,VIF = 6.12,6.116437068024943

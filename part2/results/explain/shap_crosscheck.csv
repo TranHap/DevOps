@@ -1,0 +1,4 @@
+comparison,n_items,kendall_tau,p_value,top5_overlap,top5_a,top5_b,note
+grouped SHAP (RF) vs SHAP (RF + step 3a),27,0.7405665020230257,1.3847077737138594e-07,4,G33 G3 G6 G21 G17,G3 G33 G17 G6 G34,clusters whose representative survived the VIF step; RF + 3a has one feature per such cluster
+grouped SHAP (RF) vs grouped permutation importance (F1),30,0.7505300739256358,3.180781702093232e-07,5,G33 G1 G3 G6 G21,G3 G33 G1 G6 G21,"all clusters; member columns permuted jointly, 10 repeats"
+"SHAP vs permutation importance (F1), per feature",46,0.48512569379028997,2.8504477124375965e-05,2,33 4 1 5 3,33 5 9 21 18,"main model, all features, sklearn permutation_importance, 10 repeats"

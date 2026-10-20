@@ -1,0 +1,18 @@
+template_id,template,step,reason,value
+31,<*>:Failed to transfer <*> to <*> got <*>: Connection reset by peer,correlation,correlated with template 30 (rho = 0.913; cluster of 2),0.9128697952776524
+11,BLOCK* NameSystem.allocateBlock: <*>. <*>,correlation,correlated with template 2 (rho = -1.000; cluster of 2),-1.0
+43,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[closed]. <*> millis timeout left.,correlation,correlated with template 27 (rho = 0.756; cluster of 2),0.755926129152639
+22,PacketResponder <*> Exception <*>: <*> millis timeout while waiting for channel to be ready for read. ch : <*>[connected local=<*> remote=<*>],correlation,correlated with template 25 (rho = 0.775; cluster of 2),0.774585764330064
+23,PacketResponder <*> Exception <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,correlation,correlated with template 14 (rho = 0.624; cluster of 3),0.6240189552191809
+24,Exception in receiveBlock for block <*>,correlation,correlated with template 14 (rho = 0.824; cluster of 3),0.8239065679841924
+20,writeBlock <*> received exception <*>: Connection reset by peer,correlation,correlated with template 19 (rho = 1.000; cluster of 2),1.0
+7,<*>:Transmitted block <*> to <*>,correlation,correlated with template 6 (rho = 1.000; cluster of 4),0.9999995820629612
+9,BLOCK* ask <*> to replicate <*> to datanode(s) <*>,correlation,correlated with template 6 (rho = 0.998; cluster of 4),0.9979308998239673
+12,<*> Starting thread to transfer block <*> to <*>,correlation,correlated with template 6 (rho = 0.991; cluster of 4),0.9910053544561408
+3,PacketResponder <*> for block <*> <*>,correlation,correlated with template 1 (rho = 0.743; cluster of 4),0.7432733778372212
+4,Received block <*> of size <*> from <*>,correlation,correlated with template 1 (rho = 0.735; cluster of 4),0.7346397497048618
+5,BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is <*> to <*> size <*>,correlation,correlated with template 1 (rho = 0.948; cluster of 4),0.9483662905258909
+32,BLOCK* NameSystem.delete: <*> is <*> to invalidSet of <*>,correlation,correlated with template 17 (rho = 0.989; cluster of 2),0.9887646474600357
+35,<*>:Got exception while serving <*> to <*>:,correlation,correlated with template 10 (rho = 0.953; cluster of 2),0.9533155919919025
+19,Exception in receiveBlock for block <*>: Connection reset by peer,VIF,VIF = 6.85,6.852717506257439
+27,Exception in receiveBlock for block <*>: Interruped while waiting for IO on channel <*>[connected local=<*> remote=<*>]. <*> millis timeout left.,VIF,VIF = 5.30,5.296173952644438
