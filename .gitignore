@@ -5,3 +5,4 @@ references/replication-package/
 __pycache__/
 *.pyc
 results/ext/scores/
+slides/node_modules/

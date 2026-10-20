@@ -107,7 +107,7 @@ Top features (mean |SHAP|, seed 0), see `results/ext/shap/shap_importance_vif_se
 | Template | What anomalous blocks look like |
 |---|---|
 | E32 `Unexpected error trying to delete block ... BlockInfo not found in volumeMap` | appears (0.35 per anomalous block vs ~0 for normal) |
-| E3 `PacketResponder <*> for block <*> <*>` (raw: `PacketResponder 1 for block blk_... terminating`) | **fewer** lines: 2.09 vs exactly 3 for normal blocks (one per replica) -> a replica pipeline did not finish |
+| E3 `PacketResponder <*> for block <*> <*>` (raw: `PacketResponder 1 for block blk_... terminating`) | **missing**: on the FULL dataset, 100% of normal blocks (558,223) have exactly 3 (one per replica); 36.7% of anomalous blocks (6,181) have **0**, the rest mostly 3 (1/4/5 are rare: 55 blocks). No anomalous block has exactly 2. (The sample mean "2.09" in the SHAP table is a mix of 0s and 3s, not "one replica missing".) |
 | E11 `Starting thread to transfer block` | appears: re-replication of the block |
 | E33 / E20 `addStoredBlock ... does not belong to any file` / `Redundant addStoredBlock` | appear |
 | E15 `writeBlock received exception ... Could not read from stream` | appears |
@@ -115,7 +115,14 @@ Top features (mean |SHAP|, seed 0), see `results/ext/shap/shap_importance_vif_se
 Local example (`shap_waterfall_vif_seed0.png`): base rate 0.029 -> 1.0, driven by **0** PacketResponder
 lines (+0.9): the block never completed any replica write.
 
+Real example (raw lines, HDFS.log): 2,950 anomalous blocks are just 2 lines, e.g. `blk_-5087939924532795057`:
+`Receiving block ... src: /10.251.202.181:49239 ...` then `NameSystem.allocateBlock: ... blk_-5087939924532795057`,
+and nothing else: the write never finished. A normal block (e.g. `blk_3796613345934950050`) has 13 lines:
+3x Receiving, allocateBlock, 3x PacketResponder N terminating, 3x Received block of size 67108864, 3x addStoredBlock.
+All 6,181 zero-PacketResponder anomalies contain Receiving + allocateBlock; 3,225 also a `writeBlock ... exception`.
+
 Take-away: the RF learned HDFS's replication protocol (3 replicas -> 3 PacketResponder/Received/addStoredBlock
-events). Many anomalies are *missing* or *extra* events, which is why count-based features (MCV) work so
-well on HDFS. A missing event at the *end* of a block (e.g. the 3rd PacketResponder) is invisible to the
-original DeepLog, which has no end-of-session key; adding EOS recovers many of them (recall 0.41 -> 0.58).
+events). Many anomalies are *missing* events (writes that never complete), which is why count-based features
+(MCV) work so well on HDFS. Such a block *stops early*: each of its 2 lines is a plausible next event, so the
+original DeepLog (no end-of-session key) sees nothing wrong; with EOS, "stop after allocateBlock" is unlikely
+and gets flagged (recall 0.41 -> 0.58 at seed 0, AUC 0.84 -> 0.96 over 10 seeds).
